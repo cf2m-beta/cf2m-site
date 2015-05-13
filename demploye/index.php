@@ -1,9 +1,5 @@
-    <?php 
-        include_once '../include/config.php';
-        include '../include/html-head.php';
-    ?>
-    <body>
+<?php
+    if(!isset($_GET['menu'])){
+        include 'controleur/index.php';
+    }
         
-        <div class="test">gef</div>
-    </body>
-</html>
