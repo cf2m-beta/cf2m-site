@@ -2,5 +2,12 @@
     border:solid 1px;
     background-color: red;
     margin: auto;
+    width:80%;
 }
 
+.footer{
+    border:solid 1px;
+    background-color: grey;
+    width:80%;
+    margin: auto;
+}
