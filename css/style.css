@@ -11,3 +11,9 @@
     width:80%;
     margin: auto;
 }
+
+body a{
+    margin:auto;
+    width:200px;
+    display: block;
+}
