@@ -5,7 +5,7 @@
     width:80%;
 }
 
-.footer{
+footer{
     border:solid 1px;
     background-color: grey;
     width:80%;
@@ -16,4 +16,10 @@ body a{
     margin:auto;
     width:200px;
     display: block;
+}
+
+#header{
+    border:solid 1px;
+    width: 80%;
+    margin: auto;
 }
