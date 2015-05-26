@@ -30,7 +30,7 @@
         
         <li><a href="#">Media</a>
             <ul>
-                <li><a href="#">Galerie</a></li>
+                <li><a href="#">Galerie Image</a></li>
                 <li><a href="#">Video</a></li>
             </ul>
         </li>
