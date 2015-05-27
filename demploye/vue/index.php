@@ -6,7 +6,7 @@
 <?php 
     include '../include/header.php'; 
 ?>    
-<div class="test">test div contenu</div>
+<div class="content"><?php print $content;?></div>
     
 <?php
     include '../include/footer.php';

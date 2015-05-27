@@ -1,8 +1,9 @@
-.test{
+.content{
     border:solid 1px;
-    background-color: red;
+    background-color: white;
     margin: auto;
     width:80%;
+    min-height: 500px;
 }
 
 footer{
