@@ -8,32 +8,35 @@
         <input type="submit" value="Rechercher">
     </form>
 
-    <ul id="menu-deroulant">
+    <ul id="menu_deroulant">
         
-        <li><a href="?menu=formation">Formation</a>
-            <ul>
-                <li><a href="?menu=formation&menu2=wdev">Web développeur</a></li>
-                <li><a href="?menu=formation&menu2=pao">Opérateur PAO / Infographiste</a></li>
-                <li><a href="?menu=formation&menu2=amult">Animateur multimédia</a></li>
-                <li><a href="?menu=formation&menu2=acompt">Aide comptable</a></li>
-                <li><a href="?menu=formation&menu2=res">Technicien reseaux</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="?menu=info">Infos</a>
-            <ul>
-                <li><a href="?menu=info&menu2=insc">Inscription</a></li>
-                <li><a href="?menu=info&menu2=test">Test</a></li>
-                <li><a href="?menu=info&menu2=horaire">Horaire</a></li>
-            </ul>
-        </li>
-        
-        <li><a href="?menu=media">Media</a>
-            <ul>
-                <li><a href="?menu=media&menu2=gal">Galerie Image</a></li>
-                <li><a href="?menu=media&menu2=vid">Video</a></li>
-            </ul>
-        </li>
+        <?php
+            $menu_deroulant = "";
+            foreach ($menu as $key => $value) {
+                
+                    $menu_deroulant .= "<li><a href='?menu=".$value['id']."'>".$value['titre']."</a>";
+                
+                if(!is_string($pages =  pages($dossier_parent, $value['id']))){
+                    
+                    $menu_deroulant .= "<ul>";
+                    
+                    while($result = mysqli_fetch_assoc($pages)){
+                        if($result['parent']==$value['id']){
+                            $menu_deroulant .= "<li><a href='?menu=".$value['id']."&menu2=".$result['id']."'>".$result['titre']."</a></li>";
+                        }    
+                    }
+                    
+                    $menu_deroulant .= "</ul>";
+                    
+                }else{//si pas d'enfant
+                    print $pages;
+                }
+                
+                $menu_deroulant .= "</li>";
+            }
+            print $menu_deroulant;
+        ?>
+       
     </ul>
     
 </div>

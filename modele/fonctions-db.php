@@ -3,12 +3,13 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname="******";
+    $dbname="cf2m";
 
     $db = mysqli_connect($servername, $username, $password, $dbname);
         if (mysqli_connect_errno()) 
             print "Failed to connect to MySQL: " . mysqli_connect_error();
     
+    mysqli_set_charset($db, "utf8");
         
     function select($table, $colonne, $condition){
 

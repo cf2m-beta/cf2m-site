@@ -24,30 +24,30 @@ body a{
     width: 80%;
     margin: auto;
 }
-#menu-deroulant, #menu-deroulant ul {
+#menu_deroulant, #menu_deroulant ul {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-#menu-deroulant {
+#menu_deroulant {
     text-align: center;
 }
-#menu-deroulant li {
+#menu_deroulant li {
     display: inline-block;
 }
-#menu-deroulant ul li {
+#menu_deroulant ul li {
     display: inherit;
 }
-#menu-deroulant a {
+#menu_deroulant a {
     text-decoration: none;
     display: block;
 	color:#000;
 }
-#menu-deroulant ul {
+#menu_deroulant ul {
     position: absolute;
     left: -999em;
     text-align: left;
 }
-#menu-deroulant li:hover ul {
+#menu_deroulant li:hover ul {
     left: auto;
 }
