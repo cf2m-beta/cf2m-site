@@ -1,2 +1,3 @@
 <?php
-print "404 File Not Found";
+    //code php page d'accueil demploye
+    include 'vue/index.php';
