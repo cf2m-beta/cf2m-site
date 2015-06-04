@@ -1,17 +1,30 @@
 <?php
-    function pages($dossier_parent, $db_parent){
-        if($db_parent || is_numeric($db_parent))
-            $pages = select('page', '*', "WHERE site='$dossier_parent' AND parent = '$db_parent'");
-        else
-            $pages = select('page', '*', "WHERE site='$dossier_parent'");
-        
-        if(get_class($pages) == 'mysqli_result'){
-            if(mysqli_num_rows($pages)){
-                return $pages;
-            }else{
-                return "Aucune page.";
-            }
-        }else{
-            return 'FAIL : '.$pages;
+
+    function afficher_menu($parent, $niveau, $array) {
+
+        $html = "";
+        $niveau_precedent = 0;
+
+        if (!$niveau && !$niveau_precedent) $html .= "\n<ul id ='menu_deroulant'>\n";
+
+        foreach ($array AS $noeud) {
+
+                if ($parent == $noeud['parent']) {
+
+                if ($niveau_precedent < $niveau) $html .= "\n<ul>\n";
+
+                $html .= "<li><a href='?menu=".$noeud['id']."'>" . $noeud['titre']."</a>";
+
+                $niveau_precedent = $niveau;
+
+                $html .= afficher_menu($noeud['id'], ($niveau + 1), $array);
+
+                }
         }
+
+        if (($niveau_precedent == $niveau) && ($niveau_precedent != 0)) $html .= "</ul>\n</li>\n";
+        else if ($niveau_precedent == $niveau) $html .= "</ul>\n";
+        else $html .= "</li>\n";
+
+        return $html;
     }
