@@ -4,7 +4,7 @@
 ?>
 <body> 
 <?php 
-    include '../include/header.php'; 
+    include '../controleur/header.php'; 
 ?>    
 <div class="content"><?php print $content;?></div>
     
