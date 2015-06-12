@@ -1,3 +1,8 @@
+div#admin img{
+    width:10px;
+    height:10px;
+}
+
 .content{
     border:solid 1px;
     background-color: white;
@@ -50,4 +55,17 @@ body a{
 }
 #menu_deroulant li:hover ul {
     left: auto;
+}
+
+
+/*TEST Formations venant de BD*/
+div.content .formation_miniature {
+    border:solid 1px;
+    display:inline-block;
+    width:310px;
+}
+
+.formation_miniature img{
+    width:300px;
+    height:120px;
 }

@@ -1,31 +1,25 @@
 <div id="header">
     <img src="../images/new logo" alt="CF2M" title="CF2M">
     <div id='admin'>
-        <span id="reponse_co"></span>
-        <form method="POST" name="admin">
-            <input type="text" name="user" placeholder="Identifiant" required>
-            <input type="password" name="password" placeholder="Mot de passe" required>
-
+        <span id="reponse_co"><?php print $retour_header_texte?></span>
+        
+        <form method="POST" name="formateur">
         <?php 
-
             if(!isset($_SESSION['formateur'])){
-            print "<input type='submit' value='Connexion' class='admin'>
+            print " <input type='text' name='ndc_formateur' placeholder='Identifiant' required>
+                    <input type='password' name='pass_formateur' placeholder='Mot de passe' required>
+                    <input type='submit' value='Connexion' class='admin'>
                   </form>";
             }else{
             print "
                 </form>
-                <a href='includes/logout.php' id='disconect'>
-                    <img src='images/logout.png' alt='Déconnexion' title='Déconnexion'>
+                <a href='../include/logout.php' id='disconect'>
+                    <img src='".RACINE."images/logout.png' alt='Déconnexion' title='Déconnexion'>
                     Déconnexion
                 </a>";
             }
 
         ?>
-        
-        <a href="./?menu=contact">
-            <img src="images/contact.png" alt="Contacter" title="Contacter">
-            Contact
-        </a>
     </div>
     <a href="?menu=plan" >Plan du site</a>
     <a href="?menu=contact" >Contactez-nous</a>
