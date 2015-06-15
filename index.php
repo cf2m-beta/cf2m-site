@@ -4,8 +4,14 @@
     session_start();
 ?>
 <body>
-    <a href="./demploye/">Demandeur d'emploi</a>
-    <a href="./employe/">Employeur</a>
+  <div id="wrapper">
+    <div id="header">
+    </div>
+    
+    <div id="content">
+        <a href="./demploye/">Demandeur d'emploi</a>
+        <a href="./employe/">Employeur</a>
+    </div>
 <?php
     include 'include/footer.php';
 ?>

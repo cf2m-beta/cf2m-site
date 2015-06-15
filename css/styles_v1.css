@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+ *Site Centre de Formation 2 Mille (cf2m)
+ * @version		1.0
+ *
+ * @author		Andrei Pastrama 
+ * @author		Eric Salla - Sallartiste Creative
+ * @author		Romuald Baldy
+ * @copyright	Author
+ */
+ 
+ /* RESET */
+html, body, ul, ul li, form 
+{
+	padding:0; margin:0; list-style-type:none;
+	font:normal 12px/18px "Arial";
+}
+
+/* GENERAL */
+html, body 
+{ 
+    width:100%; 
+	text-align:center; 
+	background: url(../images/bground.jpg) no-repeat top center #5e6158 fixed; 
+}
+
+a {outline: 0;}
+
+a img 
+{
+   border:none !important;
+}
+
+/* PAGES */
+#wrapper
+{
+	/*border:1px solid red;*/
+	width:85%;
+	margin:0 auto;
+	min-height:800px;
+}
+
+#header
+{
+	/*border:1px solid green;*/
+	height:150px;
+	margin:15px 0 5px 0;
+	background:#fff;
+}
+
+/*---CONTENT----*/
+#content
+{
+	/*border:1px solid white;*/
+	height:500px;
+	background:#fff;
+	margin:0 0 5px 0;
+}
+
+/*---FOOTER----*/
+footer
+{
+	/*border:1px solid #9F6;*/
+	height:250px;
+}
+
+.sections
+{
+	background:#fff;
+	height:150px;
+	margin:0 0 5px 0;
+}
+
+.partenaires
+{
+	background:#fff;
+	height:80px;
+	margin:0 0 5px 0;
+}
+
+.copy
+{
+	
+}
+
