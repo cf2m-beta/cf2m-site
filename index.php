@@ -41,7 +41,7 @@ session_start();
                 <div class="clear"></div>
             </div>
             <div class="logo">
-                <a href="/index.php" id="logo"><span class="hidden">Page d'accueil</span></a>
+                <a href="index.php" id="logo"><span class="hidden">Page d'accueil</span></a>
                 <h2>Formations Professionnelles en Informatique</h2>
             </div>
           <div class="clear"></div>
