@@ -32,30 +32,191 @@ a img
    border:none !important;
 }
 
+.clear
+{
+	clear:both;
+}
+
+.hidden 
+{
+	display: none;
+}
+
+
 /* PAGES */
 #wrapper
 {
 	/*border:1px solid red;*/
-	width:85%;
+	width:1140px;
 	margin:0 auto;
 	min-height:800px;
+	text-align:left;
 }
-
+/*----HEADER-----*/
 #header
 {
 	/*border:1px solid green;*/
-	height:150px;
-	margin:15px 0 5px 0;
-	background:#fff;
+	/*height:150px;*/
+	margin:15px 0 10px 0;
+	background:#333;
+	position:relative;
 }
 
-/*---CONTENT----*/
+.nav-bottom
+{
+	/*border:1px solid red;*/
+	float:right;
+	width:400px;
+	margin:0 10px 10px 0;
+}
+
+nav
+{
+	/*border:1px solid red;*/
+	margin:5px 0 30px 0;
+}
+
+nav ul
+{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	float:right;
+}
+
+nav li
+{
+	padding:0 5px;
+	margin:0;
+	display:block;
+	float:left;
+	border-right: dotted #989a93 1px;
+}
+
+nav li:last-child
+{
+	border-right:none;
+}
+
+nav li a
+{
+	color:#989a93;
+	font-size:.92em;
+	text-decoration:none;
+	padding:10px 0;
+	margin:0;
+	font-weight:bold;
+}
+
+nav li a:hover
+{
+	border-bottom:solid 3px #a65b2a;
+	padding:0;
+	margin:0;
+	text-decoration:none;
+}
+
+.logo
+{
+	/*border:1px solid #960;*/
+	width:300px;
+	margin:20px 0 0 40px;
+	float:left;
+}
+
+.logo a
+{
+	width:116px;
+	height:80px;
+	display:block;
+	background:url(../images/icones/redlogoblanc.png) no-repeat center center;
+}
+
+.logo h2, .cf2m h2
+{
+	color:#CCC;
+	margin:5px 0;
+}
+
+.search
+{
+	/*border:1px solid #F66;*/
+	width:400px;
+	/*position:absolute;
+	right:20px;
+	top:50px;*/
+	text-align:right;
+}
+
+#searchbar 
+{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+#searchbar li 
+{
+	padding:0;
+	margin:0;
+	display: inline;
+}
+
+.search
+{
+	float:right;
+	width:171px;
+	background:#666;
+	border-radius:10px;
+}
+
+.search input
+{
+	border-style:none;
+	width:144px;
+	height:22px;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	float:left;
+	padding-left:5px;
+	color:#6f7269;
+	background:#666;
+	border-radius:10px;
+}
+
+.cf2m
+{
+	/*border: 1px solid green;*/
+	width:400px;
+	float:right;
+	text-align:right;
+}
+
+.cf2m ul
+{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	float:right;
+}
+
+.cf2m li
+{
+	padding:0 0 0 5px;
+	margin:0;
+	display:block;
+	float:left;
+}
+
+
+/*----CONTENT----*/
 #content
 {
 	/*border:1px solid white;*/
 	height:500px;
 	background:#fff;
-	margin:0 0 5px 0;
+	margin:0 0 10px 0;
 }
 
 /*---FOOTER----*/
@@ -69,14 +230,14 @@ footer
 {
 	background:#fff;
 	height:150px;
-	margin:0 0 5px 0;
+	margin:0 0 10px 0;
 }
 
 .partenaires
 {
 	background:#fff;
 	height:80px;
-	margin:0 0 5px 0;
+	margin:0 0 10px 0;
 }
 
 .copy
