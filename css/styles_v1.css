@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
 /**
  *Site Centre de Formation 2 Mille (cf2m)
  * @version		1.0
@@ -47,7 +46,7 @@ a img
 #wrapper
 {
 	/*border:1px solid red;*/
-	width:1140px;
+	width:1100px;
 	margin:0 auto;
 	min-height:800px;
 	text-align:left;
@@ -67,13 +66,13 @@ a img
 	/*border:1px solid red;*/
 	float:right;
 	width:400px;
-	margin:0 10px 10px 0;
+	margin:0 20px 10px 0;
 }
 
 nav
 {
 	/*border:1px solid red;*/
-	margin:5px 0 30px 0;
+	margin:5px 0 20px 0;
 }
 
 nav ul
@@ -142,10 +141,8 @@ nav li a:hover
 {
 	/*border:1px solid #F66;*/
 	width:400px;
-	/*position:absolute;
-	right:20px;
-	top:50px;*/
 	text-align:right;
+	height:22px;
 }
 
 #searchbar 
@@ -162,26 +159,32 @@ nav li a:hover
 	display: inline;
 }
 
+#searchbar img
+{
+	margin-top:2px;
+}
+
 .search
 {
 	float:right;
 	width:200px;
 	background:#666;
 	border-radius:10px;
+	padding-right:10px;
 }
 
 .search input
 {
 	border-style:none;
 	width:144px;
-	height:22px;
+	height:20px;
 	margin:0;
 	padding:0;
 	font-size:12px;
 	float:left;
-	padding-left:5px;
-	color:#6f7269;
-	background:#666;
+	padding-left:10px;
+	color:#CCC;
+	background:transparent;
 	border-radius:10px;
 }
 
@@ -191,6 +194,7 @@ nav li a:hover
 	width:400px;
 	float:right;
 	text-align:right;
+	margin:15px 0 0 0;
 }
 
 .cf2m ul
@@ -203,7 +207,7 @@ nav li a:hover
 
 .cf2m li
 {
-	padding:0 0 0 5px;
+	padding:0 0 0 20px;
 	margin:0;
 	display:block;
 	float:left;
@@ -226,22 +230,105 @@ footer
 	height:250px;
 }
 
-.sections
+.footer-top
 {
 	background:#fff;
-	height:150px;
-	margin:0 0 10px 0;
+	/*height:150px;*/
+	margin:0 0 10px;
+	padding-left:60px;
+}
+
+.footer-top section
+{
+	float:left;
+	width:300px;
+	border-left:1px solid #999;
+	margin:10px 0px;
+	padding-left:20px;
+}
+
+.footer-top section h4
+{
+	font-family: 'Questrial', sans-serif;
+	font-size:1.5em;
+}
+
+.footer-top section:nth-child(1)
+{
+	border-left:none;
+}
+
+
+.footer-top section:nth-child(3)
+{
+	font-size:1em;
+}
+
+.footer-top section:nth-child(3) span
+{
+	color:#F90;
+	font-weight:bolder;
+	font-style:italic;
+}
+
+.footer-top section:nth-child(3) p
+{
+	margin-bottom:5px;
 }
 
 .partenaires
 {
 	background:#fff;
-	height:80px;
 	margin:0 0 10px 0;
+	text-align:center;
+}
+
+.partenaires ul
+{
+	margin: 0;
+	padding:10px 0;
+}
+
+.partenaires ul li
+{
+	display:inline-block;
+	margin-left:40px;
 }
 
 .copy
 {
-	
+	color:#CCC;
+	margin-bottom:80px;
+	vertical-align:central;
 }
 
+.copy section:first-child
+{
+	width:300px;
+	float:left;
+}
+
+.copy section:first-child h4
+{
+	font-size:.9em;
+}
+
+.copy section:last-child
+{
+	width:300px;
+	float:right;
+}
+
+.copy section:last-child ul
+{
+	padding:0;
+	margin:0;
+	float:right;
+}
+
+.copy section:last-child li
+{
+	padding:0 2px;
+	margin:0;
+	display:inline-block;
+}

@@ -20,9 +20,10 @@ session_start();
                     <form action="" method="post" name="recherche">
                         <ul id="searchbar">
                             <li>
-                                <input id="i-search" name="search" type="search" class="searchInput" value="" restorable="Rechercher" title="Rechercher" />
+                                <input name="search" type="search" class="searchInput" placeholder="Rechercher" title="Rechercher" />
                                 <a href="#" onClick="document.fsearch.submit()">
-                                    <img src="images/icones/reach.png" style="border: none;" alt="Search" /></a>
+                                    <img src="<?php print RACINE?>images/icones/reach.png" style="border: none;" alt="Search" />
+                                </a>
                             </li>
                         </ul>
                         <input type="submit" style="display:none;"/>
@@ -30,18 +31,17 @@ session_start();
                     </form>
                 </div>
                 <div class="cf2m">
-                <h2>cf2m c'est aussi</h2>
+                <!--<h2>cf2m c'est aussi</h2>-->
                 <ul>
-                    <li><img src="images/icones/logo-pixelandco.png" title="pixelco logo" /></li>
-                    <li><img src="images/icones/logo-pixelandco.png" title="pixelco logo" /></li>
-                    <li><img src="images/icones/logo-pixelandco.png" title="pixelco logo" /></li>
-                    <li><img src="images/icones/logo-pixelandco.png" title="pixelco logo" /></li>
+                    <li><img src="<?php print RACINE?>images/icones/logo-pixelandco.png" title="pixelco logo" /></li>
+                    <li><img src="<?php print RACINE?>images/icones/CF2DNew_logo.png" title="cf2d logo" /></li>
+                    <li><img src="<?php print RACINE?>images/icones/logo-pedagotheque.png" title="Pédagotheque logo" /></li>
                 </ul>
             </div>
                 <div class="clear"></div>
             </div>
             <div class="logo">
-                <a href="index.php" id="logo"><span class="hidden">Page d'accueil</span></a>
+                <a href="<?php print RACINE?>" id="logo"><span class="hidden">Page d'accueil</span></a>
                 <h2>Formations Professionnelles en Informatique</h2>
             </div>
           <div class="clear"></div>
