@@ -3,35 +3,49 @@
             <div class="footer-top">
                <section>
                   <h4>Nous Contacter</h4>
+                  <p>
+                      Avenue du Parc, 89<br />
+                      1060 Bruxelles<br />
+                      Belgique
+                  </p>
+                  <ul>
+                     <li>02/539.03.60</li>
+                     <li>secretariat@cf2m.be</li>
+                  </ul>
+                 <!-- <span>
+                       ouvert du lundi au vendredi<br />
+                       de 9h00 à 17h
+                  </span>-->
+                  
                   
                </section>
                
                <section>
                   <h4>Nos Formations</h4> 
-                  <ul>  
-                     <li>Développeur Web</li>
-                     <li>P.A.O</li>
-                     <li>Animateur MultiMédia</li>
-                     <li>Aide-comptable</li>
-                     <li>Réseaux</li>
+                  <ul>
+                     <li><a href="">P.A.O</a></li>
+                     <li><a href="">Réseaux</a></li>  
+                     <li><a href="">Aide-comptable</a></li>
+                     <li><a href="">Développeur Web</a></li>
+                     <li><a href="">Animateur MultiMédia</a></li>
                   </ul>
                </section>
                
                <section>
-                   <h4>Nos News</h4>
+                   <h4>Dernières Nouvelles</h4>
                    <p> 
-                      <span>15 Juin</span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Aenean malesuada purus et luctus.
+                      <span>15 Juin 2015</span>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Aenean malesuada purus.
                    </p>
                    <p> 
-                      <span>15 Juin</span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Aenean malesuada purus et luctus.
+                      <span>20 Juillet 2015</span>
+                        Zorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      Aenean malesuada purus.
                    </p>
                    <p> 
-                      <span>15 Juin</span>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                      <span>01 Aout 2015</span>
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                       Aenean malesuada purus et luctus.
                    </p>
                </section>
@@ -54,15 +68,15 @@
                  <img src="<?php print RACINE?>images/icones/logo-simple-footer-.png" alt="logo cf2m" />
                </section>
                <section>
-                 
+                 <P>Suivez-nous sur</P>
                  <ul>
-                    <li>Suivez-nous sur</li>
-                    <li><img src="<?php print RACINE?>images/icones/facebook.png" alt="icon Facebook" /></li>
-                    <li><img src="<?php print RACINE?>images/icones/twitter.png" alt="icon twitter" /></li>
-                    <li><img src="<?php print RACINE?>images/icones/googleplus.png" alt="icon google+" /></li>
-                    <li><img src="<?php print RACINE?>images/icones/linkedin.png" alt="icon linkedin" /></li>
-                    <li><img src="<?php print RACINE?>images/icones/rss.png" alt="icon rss" /></li>
-                    <li><img src="<?php print RACINE?>images/icones/wordpress.png" alt="icon wordpress" /></li>
+                    
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
                  </ul>
                </section>
             </div>

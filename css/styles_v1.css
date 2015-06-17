@@ -13,7 +13,7 @@
 html, body, ul, ul li, form 
 {
 	padding:0; margin:0; list-style-type:none;
-	font:normal 12px/18px "Arial";
+	/*font: "Arial";*/
 }
 
 /* GENERAL */
@@ -21,7 +21,8 @@ html, body
 { 
     width:100%; 
 	text-align:center; 
-	background: url(../images/bground.jpg) no-repeat top center #5e6158 fixed; 
+	background: url(../images/bground.jpg) no-repeat top center #5e6158;
+	font:normal 12px/18px Arial, Helvetica, sans-serif; 
 }
 
 a {outline: 0;}
@@ -46,7 +47,7 @@ a img
 #wrapper
 {
 	/*border:1px solid red;*/
-	width:1100px;
+	width:1000px;
 	margin:0 auto;
 	min-height:800px;
 	text-align:left;
@@ -227,7 +228,7 @@ nav li a:hover
 footer
 {
 	/*border:1px solid #9F6;*/
-	height:250px;
+	height-min:250px;
 }
 
 .footer-top
@@ -235,27 +236,70 @@ footer
 	background:#fff;
 	/*height:150px;*/
 	margin:0 0 10px;
-	padding-left:60px;
+	/*padding-left:15px;*/
 }
 
 .footer-top section
 {
 	float:left;
 	width:300px;
-	border-left:1px solid #999;
+	/*border-left:1px solid #999;*/
 	margin:10px 0px;
-	padding-left:20px;
+	padding-left:10px;
+	margin-left:15px;
 }
 
 .footer-top section h4
 {
 	font-family: 'Questrial', sans-serif;
 	font-size:1.5em;
+	color:#F60;
+	margin:10px 0;
+	border-bottom:1px solid #F60;
 }
 
 .footer-top section:nth-child(1)
 {
 	border-left:none;
+}
+
+.footer-top section:nth-child(1) p
+{
+	border-bottom:1px solid #999;
+	width:60%;
+	margin-bottom:10px;
+	padding-bottom:5px;
+}
+
+.footer-top section:nth-child(1) li
+{
+	padding:0 0 2px 30px;
+	background:url(../images/icones/phone.png) no-repeat left center;
+}
+
+.footer-top section:nth-child(1) li:last-child
+{
+	padding-left:30px;
+	background:url(../images/icones/email.png) no-repeat left center;
+}
+
+.footer-top section:nth-child(2) li
+{
+	list-style-type:square;
+	margin-left:10px;
+}
+
+.footer-top section:nth-child(2) a
+{
+	text-decoration:none;
+	color:#333;
+	font-weight:normal;
+}
+
+.footer-top section:nth-child(2) a:hover
+{
+	text-decoration:underline;
+	color:#F60;
 }
 
 
@@ -273,7 +317,9 @@ footer
 
 .footer-top section:nth-child(3) p
 {
-	margin-bottom:5px;
+	margin-bottom:10px;
+	border-bottom:1px solid #CCC;
+	color:#333;
 }
 
 .partenaires
@@ -328,7 +374,46 @@ footer
 
 .copy section:last-child li
 {
-	padding:0 2px;
+	padding:0px;
 	margin:0;
 	display:inline-block;
+	width:32px;
+	height:32px;
+}
+
+.copy section:last-child li a
+{
+	display:inline-block;
+	width:32px;
+	height:32px;
+}
+
+.copy section:last-child li:nth-child(1)
+{
+	background:url(../images/icones/facebook_dark.png) no-repeat center center;
+}
+
+.copy section:last-child li:nth-child(2)
+{
+	background:url(../images/icones/google_dark.png) no-repeat center center;
+}
+
+.copy section:last-child li:nth-child(3)
+{
+	background: url(../images/icones/twitter02_dark.png) no-repeat center center;
+}
+
+.copy section:last-child li:nth-child(4)
+{
+	background:url(../images/icones/in_dark.png) no-repeat center center;
+}
+
+.copy section:last-child li:nth-child(5)
+{
+	background:url(../images/icones/google_dark.png) no-repeat center center;
+}
+
+.copy section:last-child li:nth-child(6)
+{
+	background:url(../images/icones/rss_dark.png) no-repeat center center;
 }

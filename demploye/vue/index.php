@@ -2,11 +2,12 @@
     include_once '../include/config.php';
     include '../include/html-head.php';
 ?>
-<body> 
+<body>
+<div id="wrapper">
 <?php 
     include '../controleur/header.php'; 
 ?>    
-<div class="content"><?php print $content;?></div>
+<div id="content"><?php print $content;?></div>
     
 <?php
     include '../include/footer.php';

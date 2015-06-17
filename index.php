@@ -50,8 +50,15 @@ session_start();
         </div>
 
         <div id="content">
+           <div class="demploi">
             <a href="./demploye/">Demandeur d'emploi</a>
+            
+           </div>
+           
+           <div class="patron">
             <a href="./employe/">Employeur</a>
+           </div>
+           <div class="clear"></div>
         </div>
         <?php
         include 'include/footer.php';
