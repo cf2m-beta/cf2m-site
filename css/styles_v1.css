@@ -37,6 +37,13 @@ a img
 	clear:both;
 }
 
+.liremore
+{
+	color: #F90;
+	font-size:.9em;
+	text-decoration:none;
+}
+
 .hidden 
 {
 	display: none;
@@ -219,16 +226,93 @@ nav li a:hover
 #content
 {
 	/*border:1px solid white;*/
-	height:500px;
+	min-height:500px;
 	background:#fff;
 	margin:0 0 10px 0;
+	padding-bottom:20px;
+}
+
+.middle-content
+{
+	text-align:center;
+	padding-top:20px;	
+}
+
+.middle-content h2
+{
+	padding-bottom:10px;
+	font-size:1em;
+	color:#666;
+}
+
+.demploi
+{
+	/*border:1px solid #FC0;*/
+	width:470px;
+	height:380px;
+	float:left;
+	margin:20px 0 20px 20px;
+	position:relative;
+	background:url(../images/demploie.jpg) no-repeat right center;
+}
+
+.demploi article, .patron article
+{
+	margin-top:120px;
+	text-transform:uppercase;
+	color:#369;
+}
+
+.demploi a
+{
+	text-decoration:none;
+	color:#2072CC;
+	text-align:center;
+	font-size:2em;
+	bottom:0;
+	right:0;
+	padding:10px;
+	font-family: 'Montserrat', sans-serif;
+	display:block;
+}
+
+.patron
+{
+	/*border:1px solid #0CF;*/
+	width:470px;
+	height:380px;
+	float:right;
+	margin:20px 20px 20px 0;
+    position:relative;
+	background:url(../images/ceo.jpg) no-repeat left center;
+}
+
+.patron a
+{
+	text-decoration:none;
+	color:#FF8000;
+	text-align:center;
+	font-size:2em;
+	bottom:0;
+	left:0;
+	padding:10px;
+	font-family: 'Montserrat', sans-serif;
+	display:block;
+}
+
+.descript
+{
+	/*border:1px solid #F63;*/
+	width:600px;
+	margin:0 auto;
+	color:#333;
 }
 
 /*---FOOTER----*/
 footer
 {
 	/*border:1px solid #9F6;*/
-	height-min:250px;
+	min-height:250px;
 }
 
 .footer-top
@@ -263,7 +347,7 @@ footer
 	border-left:none;
 }
 
-.footer-top section:nth-child(1) p
+.footer-top section:nth-child(1) address
 {
 	border-bottom:1px solid #999;
 	width:60%;
@@ -363,6 +447,13 @@ footer
 {
 	width:300px;
 	float:right;
+	text-align:right;
+}
+
+.copy section:last-child p
+{
+	font-size:1.2em;
+	margin-bottom:5px;
 }
 
 .copy section:last-child ul
