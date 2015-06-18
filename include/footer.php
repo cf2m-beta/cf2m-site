@@ -3,11 +3,11 @@
             <div class="footer-top">
                <section>
                   <h4>Nous Contacter</h4>
-                  <p>
+                  <address>
                       Avenue du Parc, 89<br />
                       1060 Bruxelles<br />
                       Belgique
-                  </p>
+                  </address>
                   <ul>
                      <li>02/539.03.60</li>
                      <li>secretariat@cf2m.be</li>
