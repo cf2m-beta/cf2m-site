@@ -5,7 +5,7 @@
         $html = "";
         $niveau_precedent = 0;
 
-        if (!$niveau && !$niveau_precedent) $html .= "\n<ul id ='menu_deroulant'>\n";
+        if (!$niveau && !$niveau_precedent) $html .= "\n<ul id ='menu-deroulant' class='menu'>\n";
 
         foreach ($array AS $noeud) {
 

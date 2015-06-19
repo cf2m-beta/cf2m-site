@@ -70,7 +70,6 @@
                <section>
                  <P>Suivez-nous sur</P>
                  <ul>
-                    
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
@@ -80,6 +79,7 @@
                  </ul>
                </section>
             </div>
+            <span class="made">Site réalisé par les stagiaires de cf2m</span>
         </footer>
 
         <script src="<?php print RACINE?>js/jquery-1.9.1.min.js"></script>
