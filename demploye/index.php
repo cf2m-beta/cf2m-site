@@ -20,6 +20,18 @@
     $content= "affichage contenu par defaut Demandeur d'emploi";
     
     if(!isset($_GET['menu'])){
+        //!!!!!!!!!!!!!!!!!!!!! affichage page id 1 (formation)    
+        $content = '<h1>CATALOGUE DES FORMATIONS</h1>';
+        //pour l'affichage contenu html venant de la BD
+        //AJOUTER HTML DECODE
+        $mysqli_result_texte = select('texte', '*', "WHERE page_id=1");
+        if(!is_string($mysqli_result_texte)){
+            while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
+                $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
+                $content.= $un_texte['contenu'];
+                $content.= '</'.$un_texte['element'].'>';
+            }
+        }
         include_once 'controleur/index.php';
     }else{
         foreach($pages AS $value){
