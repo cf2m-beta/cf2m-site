@@ -2,6 +2,8 @@
 include_once 'include/config.php';
 include 'include/html-head.php';
 session_start();
+$array_dirname = explode(DIRECTORY_SEPARATOR, dirname(__FILE__));
+setcookie('dossier_parent', array_pop($array_dirname));
 ?>
 <body>
     <div id="wrapper">
