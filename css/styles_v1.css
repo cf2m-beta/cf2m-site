@@ -651,7 +651,7 @@ footer
 	background: -o-linear-gradient(#04acec,  #0186ba);
 	background: -ms-linear-gradient(#04acec,  #0186ba);
 	background: linear-gradient(#04acec,  #0186ba);
-	color:#CCC;
+	color:#CCCCCC;
 }
 
 .menu ul li:first-child a
