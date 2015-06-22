@@ -235,7 +235,7 @@ nav li a:hover
 .middle-content
 {
 	text-align:center;
-	padding-top:20px;	
+	padding-top:10px;	
 }
 
 .middle-content h2
@@ -251,14 +251,24 @@ nav li a:hover
 	width:470px;
 	height:380px;
 	float:left;
-	margin:20px 0 20px 20px;
+	margin:10px 0 20px 20px;
 	position:relative;
-	background:url(../images/demploie.jpg) no-repeat right center;
+}
+
+.demploi a:last-child
+{
+	width:125px;
+	height:125px;
+	background:url(../images/icones/demploi-picto.png) right center no-repeat;
+	margin:0 auto;
+	display:block;
+	margin-bottom:20px;
+	border:1px;
 }
 
 .demploi article, .patron article
 {
-	margin-top:120px;
+	margin-top:50px;
 	text-transform:uppercase;
 	color:#369;
 }
@@ -266,7 +276,7 @@ nav li a:hover
 .demploi a
 {
 	text-decoration:none;
-	color:#2072CC;
+	color:#cc0000;
 	text-align:center;
 	font-size:2em;
 	bottom:0;
@@ -278,19 +288,28 @@ nav li a:hover
 
 .patron
 {
-	/*border:1px solid #0CF;*/
+	border-left:1px solid #CCC;
 	width:470px;
 	height:380px;
 	float:right;
 	margin:20px 20px 20px 0;
     position:relative;
-	background:url(../images/ceo.jpg) no-repeat left center;
+}
+
+.picto
+{
+	width:125px;
+	height:125px;
+	display:block;
+	margin:0 auto;
+	background:url(../images/icones/demploi-picto.png) left center no-repeat;
+	margin-bottom:20px;
 }
 
 .patron a
 {
 	text-decoration:none;
-	color:#FF8000;
+	color:#999;
 	text-align:center;
 	font-size:2em;
 	bottom:0;
@@ -306,6 +325,10 @@ nav li a:hover
 	width:600px;
 	margin:0 auto;
 	color:#333;
+	border:1px solid #CCC;
+	border-radius:5px;
+	padding:5px;
+	box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.66);
 }
 
 /*---FOOTER----*/
