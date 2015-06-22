@@ -15,7 +15,7 @@ session_start();
                  <article>
                     <h2>Vous êtes...</h2>
                     <a href="demploye/">Demandeur d'emploi</a>
-                    <a href=d"employe"></a>
+                    <a href="demploye"></a>
                     Et vous cherchez une formation.
                  </article>
                </aside>
