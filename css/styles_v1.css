@@ -784,6 +784,46 @@ footer
 	font-size:1.5em;
 }
 
+.web>*:nth-child(2) a
+{
+	color:#F90;
+	border-bottom:1px solid #f90;
+	display:block;
+	margin-bottom:5px;
+}
+
+.pao>*:nth-child(2) a
+{
+	color:#b5007b;
+	border-bottom:1px solid #b5007b;
+	display:block;
+	margin-bottom:5px;
+}
+
+.amm>*:nth-child(2) a
+{
+	color:#0081c6;
+	border-bottom:1px solid #0081c6;
+	display:block;
+	margin-bottom:5px;
+}
+
+.aide>*:nth-child(2) a
+{
+	color:#bdcd00;
+	border-bottom:1px solid #bdcd00;
+	display:block;
+	margin-bottom:5px;
+}
+
+.rezo>*:nth-child(2) a
+{
+	color:#c30;
+	border-bottom:1px solid #c30;
+	display:block;
+	margin-bottom:5px;
+}
+
 .formation_miniature>*:nth-child(4) a
 {
 	font-size:1em;

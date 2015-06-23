@@ -9,6 +9,9 @@
 ?>    
 <div id="content">
     <?php print $content;?>
+    <div class="formation_miniature">
+    sss
+    </div>
     <div class="clear"></div>
 </div>
     
