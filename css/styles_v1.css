@@ -795,7 +795,6 @@ footer
 	width:285px;
 	height:100px;
 	display:block;
-	/*background-size:cover;*/
 }
 
 .web1:hover
@@ -826,7 +825,7 @@ footer
 .aide1
 {
 	background:url(../images/aide.jpg) no-repeat center;
-	border:1px solid #CCC;
+	border:1px solid #cccccc;
 }
 
 .aide1:hover
