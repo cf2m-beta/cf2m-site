@@ -8,7 +8,7 @@
     setcookie('dossier_parent', array_pop($array_dirname));
     
     
-    $pages = [];
+    $pages = array();
     $pages_db = select('page', '*', 'ORDER BY ordre ASC');
     $i=0;
     while($une_page= mysqli_fetch_assoc($pages_db)){
@@ -21,7 +21,7 @@
     
     if(!isset($_GET['menu'])){
         //!!!!!!!!!!!!!!!!!!!!! affichage page id 1 (formation)    
-        $content = '<h1>CATALOGUE DES FORMATIONS</h1>';
+        $content = '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>';
         //pour l'affichage contenu html venant de la BD
         //AJOUTER HTML DECODE
         $mysqli_result_texte = select('texte', '*', "WHERE page_id=1");
@@ -36,7 +36,7 @@
     }else{
         foreach($pages AS $value){
             if($_GET['menu']===$value['id']){
-                $content = '<h1>CATALOGUE DES FORMATIONS</h1>';
+                $content = '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>';
                 //pour l'affichage contenu html venant de la BD
                 //AJOUTER HTML DECODE
                 $mysqli_result_texte = select('texte', '*', "WHERE page_id='".$value['id']."'");
