@@ -15,7 +15,8 @@ session_start();
                  <article>
                     <h2>Vous êtes...</h2>
                     <a href="demploye/">Demandeur d'emploi</a>
-                    Et vous cherchez une formation.
+                    <a href="demploye"></a>
+                    Et vous cherchez une formation...
                  </article>
                </aside>
                
@@ -23,6 +24,7 @@ session_start();
                 <article>
                     <h2>Vous êtes...</h2>
                     <a href="employe/">Employeur</a>
+                    <a class="picto" href="employe"></a>
                     Et vous recherchez des personnes <br />
                     qualifiées pour un stage.
                  </article>
@@ -30,7 +32,7 @@ session_start();
                <div class="clear"></div>
                <div class="descript">
                    <p>
-                      <strong>FC2M</strong>: Duis at rhoncus nisl. Donec sit amet risus quam. Phasellus neque nunc, consectetur vitae felis vel, 
+                      <strong>FC2M</strong>: Duis at rhoncus nisl. Donec sit amet risus quam,
                       dignissim vehicula quam. Donec ut varius odio. Etiam pretium tortor dui, id imperdiet mi sodales id. 
                       Duis semper dignissim facilisis. Curabitur nec eros laoreet, aliquet mi in, sollicitudin felis.<br /> 
                       <span><a class="liremore" href="">Pour plus ici... [+]</a> </span>

@@ -25,7 +25,7 @@ html, body
 	font:normal 12px/18px Arial, Helvetica, sans-serif; 
 }
 
-a {outline: 0;}
+a {outline: 0; text-decoration:none}
 
 a img 
 {
@@ -230,12 +230,13 @@ nav li a:hover
 	background:#fff;
 	margin:10px 0 10px 0;
 	padding-bottom:20px;
+	position:relative;
 }
 
 .middle-content
 {
 	text-align:center;
-	padding-top:20px;	
+	padding-top:10px;	
 }
 
 .middle-content h2
@@ -251,14 +252,28 @@ nav li a:hover
 	width:470px;
 	height:380px;
 	float:left;
-	margin:20px 0 20px 20px;
-	position:relative;
-	background:url(../images/demploie.jpg) no-repeat right center;
+	margin:10px 0 20px 20px;
+}
+
+.demploi a:last-child
+{
+	width:125px;
+	height:125px;
+	background:url(../images/icones/demploi-picto.png) right center no-repeat;
+	margin:0 auto;
+	display:block;
+	margin-bottom:20px;
+	border:1px;
+}
+
+.demploi a:last-child:hover
+{
+	background:url(../images/icones/demploi-picto-hover.png) right center no-repeat;
 }
 
 .demploi article, .patron article
 {
-	margin-top:120px;
+	margin-top:50px;
 	text-transform:uppercase;
 	color:#369;
 }
@@ -266,7 +281,7 @@ nav li a:hover
 .demploi a
 {
 	text-decoration:none;
-	color:#2072CC;
+	color:#cc0000;
 	text-align:center;
 	font-size:2em;
 	bottom:0;
@@ -278,19 +293,38 @@ nav li a:hover
 
 .patron
 {
-	/*border:1px solid #0CF;*/
+	border-left:1px solid #CCC;
 	width:470px;
 	height:380px;
 	float:right;
-	margin:20px 20px 20px 0;
+	margin:20px 20px 20px 0px;
     position:relative;
-	background:url(../images/ceo.jpg) no-repeat left center;
+}
+
+.picto
+{
+	width:125px;
+	height:125px;
+	display:block;
+	margin:0 auto;
+	background:url(../images/icones/demploi-picto.png) left center no-repeat;
+	margin-bottom:20px;
+}
+
+.picto:hover
+{
+	width:125px;
+	height:125px;
+	display:block;
+	margin:0 auto;
+	background:url(../images/icones/demploi-picto-hover.png) left center no-repeat;
+	margin-bottom:20px;
 }
 
 .patron a
 {
 	text-decoration:none;
-	color:#FF8000;
+	color:#999;
 	text-align:center;
 	font-size:2em;
 	bottom:0;
@@ -306,6 +340,10 @@ nav li a:hover
 	width:600px;
 	margin:0 auto;
 	color:#333;
+	border:1px solid #CCC;
+	border-radius:5px;
+	padding:5px;
+	box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.66);
 }
 
 /*---FOOTER----*/
@@ -699,3 +737,111 @@ footer
 
 * html .menu             { zoom: 1; } /* IE6 */
 *:first-child+html .menu { zoom: 1; } /* IE7 */
+
+/*---------------------------*/
+/*---CONTENUES CATEGORIE-----*/
+/*---------------------------*/
+
+.title-cata
+{
+	height:45px;
+	line-height:45px;
+	padding:0 0 0 30px;
+	font-size:1.6em;
+	color:#fff;
+	background:rgba(0, 0, 0, 0.8);
+}
+
+.bgBtformation
+{
+	border:1px solid #CF0;
+}
+
+.formation_miniature
+{
+	width:285px;
+	float:left;
+	font-size:.95em;
+	line-height:1.5em;
+	margin:35px 0 0 35px;
+	color:#333;
+	height:200px;
+}
+
+.formation_miniature>a:nth-child(1)
+{
+	width:285px;
+	height:100px;
+	/*border:1px solid gray;*/
+	display:block;
+	margin-bottom:10px;
+    /*background:url(../images/sample.jpg) no-repeat center;
+		background-size:cover;*/
+}
+
+.formation_miniature>*:nth-child(2)
+{
+	font-size:1.5em;
+}
+
+.formation_miniature>*:nth-child(4) a
+{
+	font-size:1em;
+}
+
+.web1
+{
+	background:url(../images/sample.jpg) no-repeat center;
+	width:285px;
+	height:100px;
+	display:block;
+	/*background-size:cover;*/
+}
+
+.web1:hover
+{
+	background:url(../images/sample-over.jpg) no-repeat center ;
+}
+
+.pao1
+{
+	background:url(../images/pao.jpg) no-repeat center;
+}
+
+.pao1:hover
+{
+	background:url(../images/pao-over.jpg) no-repeat center;
+}
+
+.amm1
+{
+	background:url(../images/amm.jpg) no-repeat center;
+}
+
+.amm1:hover
+{
+	background:url(../images/amm-over.jpg) no-repeat center;
+}
+
+.aide1
+{
+	background:url(../images/aide.jpg) no-repeat center;
+	border:1px solid #CCC;
+}
+
+.aide1:hover
+{
+	background:url(../images/aide-over.jpg) no-repeat center;
+}
+
+.rezo1
+{
+	background:url(../images/rezo.jpg) no-repeat center;
+	border:1px solid #CCC;
+}
+
+.rezo1:hover
+{
+	background:url(../images/rezo-over.jpg) no-repeat center;
+}
+
