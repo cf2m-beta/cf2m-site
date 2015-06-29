@@ -28,12 +28,14 @@
     $menu_deroulant = $_COOKIE['dossier_parent']== 'demploye' ? afficher_menu(0, 0, $pages) : '';
     
     //baniere
-    $banner='';
+    $banner='<div id="banner" class="slide">
+            SLIDE-ERIK
+            </div>';
     if(isset($_GET['menu'])){
         if($_GET['menu']!=1){
             foreach ($pages as $key => $value){
                 if($_GET['menu']==$pages[$key]['id']){
-                    $banner.='<div id="banner" class="'.$pages[$key]['url'].'"><h1>'.$pages[$key]['titre'].'</h1>';
+                    $banner ='<div id="banner" class="'.$pages[$key]['url'].'"><h1>'.$pages[$key]['titre'].'</h1>';
                 }
             }
             $banner.='</div>';
@@ -41,16 +43,18 @@
     }
     
     //formulaire de connexion
+    $connexion="";
     if(isset($_POST['user'])){
         $user =  strip_tags(trim($_POST['user']));
         $password = strip_tags(trim($_POST['password']));
         if(!is_string($db_user = select('utilisateur', '*', "WHERE nom_utilisateur = '$user' AND mot_passe = '$password'"))){
-            $_SESSION['login']=true;
-            var_dump($db_user);
             while ($one_db_user=  mysqli_fetch_assoc($db_user)){
-                    //A FAIRE        
+                $_SESSION=$one_db_user;    
             }
-        }else{print $db_user;} //A FAIRE  
-    }else{print 'fail';} //A FAIRE  
+            $_SESSION['login']=true;
+        }else{
+            $connexion="Mot de passe ou Identifiant, incorrect.";
+        }
+    }
     
     include_once ($_COOKIE['dossier_parent']=='cf2m-site')? '/vue/header.php': '../vue/header.php';
