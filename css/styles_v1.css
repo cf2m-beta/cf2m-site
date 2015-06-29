@@ -79,7 +79,7 @@ a img
 
 nav
 {
-	/*border:1px solid red;*/
+	/*border:1px solid green;*/
 	margin:5px 0 20px 0;
 }
 
@@ -89,6 +89,7 @@ nav ul
 	margin:0;
 	list-style-type:none;
 	float:right;
+	height:30px;
 }
 
 nav li
@@ -221,6 +222,12 @@ nav li a:hover
 	float:left;
 }
 
+/*----login------*/
+.login
+{
+	/*border:1px solid #3FC;*/
+}
+
 
 /*----CONTENT----*/
 #content
@@ -252,7 +259,7 @@ nav li a:hover
 	width:470px;
 	height:380px;
 	float:left;
-	margin:10px 0 20px 20px;
+	margin:20px 0 20px 20px;
 }
 
 .demploi a:last-child
@@ -884,4 +891,44 @@ footer
 {
 	background:url(../images/rezo-over.jpg) no-repeat center;
 }
+/*-----section information-----*/
+.info
+{
+	/*background:#CCC;*/
+}
+
+.info li a
+{
+	width:285px;
+	height:40px;
+	display:block;
+	margin-bottom:13px;
+}
+
+.info li:nth-child(1)
+{
+}
+
+.info li:nth-child(1) a
+{
+	background:url(../images/download.png) no-repeat left center;
+}
+
+.info li:nth-child(2) a
+{
+	background:url(../images/conditions.png) no-repeat left center;
+}
+
+.info li:nth-child(3) a
+{
+	background:url(../images/inscriptions.png) no-repeat left center;
+}
+
+.info li:nth-child(4)
+{
+	margin-bottom:none;
+	background:url(../images/entreetest.png) no-repeat left center;
+}
+
+
 
