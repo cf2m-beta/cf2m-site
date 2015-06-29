@@ -7,7 +7,6 @@
     $array_dirname = explode(DIRECTORY_SEPARATOR, dirname(__FILE__));
     setcookie('dossier_parent', array_pop($array_dirname));
     
-    
     $pages = array();
     $pages_db = select('page', '*', 'ORDER BY ordre ASC');
     $i=0;
@@ -15,7 +14,6 @@
         $pages[$i]=$une_page;
         $i++;
     }
-    $menu_deroulant = afficher_menu(0, 0, $pages);
     
     $content= "affichage contenu par defaut Demandeur d'emploi";
     
@@ -34,9 +32,10 @@
         }
         include_once 'controleur/index.php';
     }else{
+        
         foreach($pages AS $value){
             if($_GET['menu']===$value['id']){
-                $content = '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>';
+                $content =($_GET['menu']==1)? '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>':'';
                 //pour l'affichage contenu html venant de la BD
                 //AJOUTER HTML DECODE
                 $mysqli_result_texte = select('texte', '*', "WHERE page_id='".$value['id']."'");

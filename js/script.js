@@ -47,3 +47,9 @@ function envoye_ajax(value,table,colonne,condition){
     }
     return (!reponse)? 'ko' :reponse;
 }
+
+//aparition formulaire de connexion
+$('a.connexion').click(function(){
+    $('div.login').toggle();
+    return false;
+});

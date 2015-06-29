@@ -2,10 +2,10 @@
     <div class="nav-bottom">
         <nav>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Plan du site</a></li>
-                <li><a href="#">Contactez-nous</a></li>
-                <li><a href="#">Connexion</a></li>
+                <li><a href="?menu=1">Accueil</a></li>
+                <li><a href="">Plan du site</a></li>
+                <li><a href="">Contactez-nous</a></li>
+                <?php print isset($_SESSION['login'])? '<li><a href="'.RACINE.'/include/logout.php" >Déconnexion</a></li' : '<li><a href="" class="connexion">Connexion</a></li'?>
             </ul>
             <div class="clear"></div>
         </nav>
@@ -31,6 +31,13 @@
                 <li><img src="<?php print RACINE ?>images/icones/logo-pedagotheque.png" title="Pédagotheque logo" /></li>
             </ul>
         </div>
+        <div class="login" style="display:none">
+            <form method="POST">
+                <input type="text" id="user" name="user" placeholder="Nom d'utilisateur" required="">
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required="">
+                <input type="submit" value="S'identifier">
+            </form>
+        </div>
         <div class="clear"></div>
     </div>
     <div class="logo">
@@ -49,3 +56,7 @@
         <div class="clear"></div>
     </div>
 </div>
+
+<?php
+    print $banner;
+?>

@@ -25,7 +25,7 @@
             }
         }
         else{
-            return $query;
+            return $query.  mysqli_error($db);
         }
     }
 
@@ -43,7 +43,7 @@
     function update($table, $colonne_valeur, $condition){
 
         global $db;
-        $query = "UPDATE $table SET $colonne_valeur WHERE $condition";
+        $query = "UPDATE $table SET $colonne_valeur $condition";
         //var_dump($query); //TEST QUERRY
         if(mysqli_query($db,$query)){
             return 'Mise à jour réussie';
@@ -55,7 +55,7 @@
     function delete($table, $condition){
 
         global $db;
-        $query = "DELETE FROM $table WHERE $condition";
+        $query = "DELETE FROM $table $condition";
         //var_dump($query); //TEST QUERRY
         if(mysqli_query($db,$query)){
             return 'Suppression réussie';
