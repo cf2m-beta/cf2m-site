@@ -9,20 +9,17 @@
             </ul>
             <div class="clear"></div>
         </nav>
-        <div class="search">
-            <form action="" method="post" name="recherche">
-                <ul id="searchbar">
-                    <li>
-                        <input name="search" type="search" class="searchInput" placeholder="Rechercher" title="Rechercher" />
-                        <a href="#" onClick="document.fsearch.submit()">
-                            <img src="<?php print RACINE ?>images/icones/reach.png" style="border: none;" alt="Search" />
-                        </a>
-                    </li>
-                </ul>
-                <input type="submit" style="display:none;"/>
-
+        <div class="login" style="display:none">
+            <form method="POST">
+                <input type="text" id="user" name="user" placeholder="Nom d'utilisateur" required="">
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required="">
+                <input type="submit" value="S'identifier">
             </form>
         </div>
+        <div id="message">
+            <?php print $connexion?>
+        </div>
+        
         <div class="cf2m">
             <!--<h2>cf2m c'est aussi</h2>-->
             <ul>
@@ -30,13 +27,6 @@
                 <li><img src="<?php print RACINE ?>images/icones/CF2DNew_logo.png" title="cf2d logo" /></li>
                 <li><img src="<?php print RACINE ?>images/icones/logo-pedagotheque.png" title="Pédagotheque logo" /></li>
             </ul>
-        </div>
-        <div class="login" style="display:none">
-            <form method="POST">
-                <input type="text" id="user" name="user" placeholder="Nom d'utilisateur" required="">
-                <input type="password" id="password" name="password" placeholder="Mot de passe" required="">
-                <input type="submit" value="S'identifier">
-            </form>
         </div>
         <div class="clear"></div>
     </div>
@@ -51,12 +41,31 @@
 <div class="noprint" style="z-index:9998; position:relative;">		
     <div>
         <?php
-        print $menu_deroulant;
+            print $menu_deroulant;
+            
+            if($_COOKIE['dossier_parent'] == 'demploye'):
         ?>
+        
+                <div class="search">
+                    <form action="" method="post" name="recherche">
+                        <ul id="searchbar">
+                            <li>
+                                <input name="search" type="search" class="searchInput" placeholder="Rechercher" title="Rechercher" />
+                                <a href="#" onClick="document.fsearch.submit()">
+                                    <img src="<?php print RACINE ?>images/icones/reach.png" style="border: none;" alt="Search" />
+                                </a>
+                            </li>
+                        </ul>
+                        <input type="submit" style="display:none;"/>
+
+                    </form>
+                </div>
+        <?php endif;?>
+        
         <div class="clear"></div>
     </div>
 </div>
 
 <?php
-    print $banner;
+    print ($_COOKIE['dossier_parent'] == 'demploye')? $banner : '';
 ?>
