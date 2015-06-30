@@ -29,7 +29,7 @@
     
     //baniere
     $banner='<div id="banner" class="slide">
-            SLIDE-ERIK
+            <img src="../images/banner1.jpg" title="" />
             </div>';
     if(isset($_GET['menu'])){
         if($_GET['menu']!=1){
