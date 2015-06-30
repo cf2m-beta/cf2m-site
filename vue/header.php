@@ -15,6 +15,8 @@
                 <input type="password" id="password" name="password" placeholder="Mot de passe" required="">
                 <input type="submit" value="OK">
             </form>
+            <span  style="font-size:.85em">Se souvenir de moi</span>&nbsp;&nbsp;&nbsp;
+            <span  style="font-size:.85em">Mot de pass oublié</span>
         </div>
         <div id="message">
             <?php print $connexion?>
@@ -39,7 +41,6 @@
 
 </div>
 <div class="noprint" style="z-index:9998; position:relative;">		
-    <div>
         <?php
             print $menu_deroulant;
             
@@ -63,7 +64,6 @@
         <?php endif;?>
         
         <div class="clear"></div>
-    </div>
 </div>
 
 <?php

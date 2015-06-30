@@ -149,57 +149,6 @@ nav li a:hover
 	margin:5px 0;
 }
 
-.search
-{
-	/*border:1px solid #F66;*/
-	width:400px;
-	text-align:right;
-	height:22px;
-}
-
-#searchbar 
-{
-	padding:0;
-	margin:0;
-	list-style-type:none;
-}
-
-#searchbar li 
-{
-	padding:0;
-	margin:0;
-	display: inline;
-}
-
-#searchbar img
-{
-	margin-top:2px;
-}
-
-.search
-{
-	float:right;
-	width:200px;
-	background:#666;
-	border-radius:10px;
-	padding-right:10px;
-}
-
-.search input
-{
-	border-style:none;
-	width:144px;
-	height:20px;
-	margin:0;
-	padding:0;
-	font-size:12px;
-	float:left;
-	padding-left:10px;
-	color:#CCC;
-	background:transparent;
-	border-radius:10px;
-}
-
 .cf2m
 {
 	/*border: 1px solid green;*/
@@ -323,6 +272,79 @@ nav li a:hover
     -webkit-animation-name: bounceInDown;
 	-moz-animation-name: bounceInDown;  
     animation-name: bounceInDown; 
+}
+
+/*---------------------------*/
+/*-----RECHERCHE FORM-------*/
+/*---------------------------*/
+.noprint
+{
+	position:relative;
+}
+
+.search
+{
+	/*border:1px solid #F66;*/
+	width:400px;
+	text-align:right;
+	height:22px;
+	position:absolute;
+	right:10px;
+	top:12px;
+}
+
+#searchbar 
+{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+}
+
+#searchbar li 
+{
+	padding:0;
+	margin:0;
+	display: inline;
+}
+
+#searchbar img
+{
+	margin-top:2px;
+}
+
+.search
+{
+	float:right;
+	width:200px;
+	background:#666;
+	border-radius:10px;
+	padding-right:10px;
+}
+
+.search input
+{
+	border-style:none;
+	width:144px;
+	height:20px;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	float:left;
+	padding-left:10px;
+	color:#fff;
+	background:transparent;
+	border-radius:10px;
+}
+
+/*---------------------------*/
+/*-----BANNER AND SLIDE------*/
+/*---------------------------*/
+#banner
+{
+	/*border:1px solid #F90;*/
+	height:150px;
+	background-color:#fff;
+	margin-top:10px;
 }
 
 
