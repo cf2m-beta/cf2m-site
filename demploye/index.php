@@ -5,7 +5,7 @@
     include_once '../include/fonctions.php';
     
     $array_dirname = explode(DIRECTORY_SEPARATOR, dirname(__FILE__));
-    setcookie('dossier_parent', array_pop($array_dirname));
+    $dossier_parent = array_pop($array_dirname);
     
     $pages = array();
     $pages_db = select('page', '*', 'ORDER BY ordre ASC');

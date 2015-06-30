@@ -25,7 +25,7 @@
         }
     }
     
-    $menu_deroulant = $_COOKIE['dossier_parent']== 'demploye' ? afficher_menu(0, 0, $pages) : '';
+    $menu_deroulant = $dossier_parent == 'demploye' ? afficher_menu(0, 0, $pages) : '';
     
     //baniere
     $banner='<div id="banner" class="slide">
@@ -57,4 +57,4 @@
         }
     }
     
-    include_once ($_COOKIE['dossier_parent']=='cf2m-site')? '/vue/header.php': '../vue/header.php';
+    include_once ($dossier_parent=='cf2m-site')? '/vue/header.php': '../vue/header.php';
