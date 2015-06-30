@@ -59,7 +59,9 @@ a img
 	min-height:800px;
 	text-align:left;
 }
-/*----HEADER-----*/
+/*---------------------------*/
+/*---       HEADER      -----*/
+/*---------------------------*/
 #header
 {
 	/*border:1px solid green;*/
@@ -73,14 +75,16 @@ a img
 {
 	/*border:1px solid red;*/
 	float:right;
-	width:400px;
+	width:450px;
 	margin:0 20px 10px 0;
+	position:relative;
 }
 
 nav
 {
 	/*border:1px solid green;*/
-	margin:5px 0 20px 0;
+	margin:5px 0 5px 0;
+	overflow:hidden;
 }
 
 nav ul
@@ -89,7 +93,6 @@ nav ul
 	margin:0;
 	list-style-type:none;
 	float:right;
-	height:30px;
 }
 
 nav li
@@ -121,7 +124,7 @@ nav li a:hover
 	border-bottom:solid 3px #a65b2a;
 	padding:0;
 	margin:0;
-	text-decoration:none;
+	text-decoration:0;
 }
 
 .logo
@@ -203,7 +206,7 @@ nav li a:hover
 	width:400px;
 	float:right;
 	text-align:right;
-	margin:15px 0 0 0;
+	margin:55px 0 0 0;
 }
 
 .cf2m ul
@@ -222,14 +225,110 @@ nav li a:hover
 	float:left;
 }
 
-/*----login------*/
+/*---------------------------*/
+/*---------LOGIN------------*/
+/*---------------------------*/
 .login
 {
-	/*border:1px solid #3FC;*/
+	border:1px solid #CCC;
+	height:40px;
+	position:absolute;
+	right:0;
+	padding:5px 5px 0 5px;
+	border-radius:5px 0 5px 5px;
+	background:#CCC;
+}
+
+.login input[type="text"], input[type="password"]
+{
+	border:1px solid #999;
+	border-radius:10px;
+	height:20px;
+	padding-left:10px;
+}
+
+.login input[type="submit"]
+{
+	border:1px solid #999;
+	border-radius:10px;
+	height:20px;
+}
+
+.animated 
+{ 
+    -webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;  
+    animation-duration: 1s; 
+    -webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes bounceInDown 
+{ 
+   0% { 
+       opacity: 0; 
+        -webkit-transform: translateY(-2000px); 
+    } 
+    60% { 
+        opacity: 1; 
+        -webkit-transform: translateY(30px); 
+    } 
+    80% { 
+        -webkit-transform: translateY(-10px); 
+    } 
+    100% { 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@-moz-keyframes bounceInDown 
+{ 
+   0% { 
+       opacity: 0; 
+        -moz-transform: translateY(-2000px); 
+    } 
+    60% { 
+        opacity: 1; 
+        -moz-transform: translateY(30px); 
+    } 
+    80% { 
+        -moz-transform: translateY(-10px); 
+    } 
+    100% { 
+        -moz-transform: translateY(0); 
+    } 
+}
+
+@keyframes bounceInDown 
+{ 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-2000px); 
+    } 
+    60% { 
+        opacity: 1; 
+        transform: translateY(30px); 
+    } 
+    80% { 
+        transform: translateY(-10px); 
+    } 
+    100% { 
+        transform: translateY(0); 
+    } 
+} 
+
+.bounceInDown 
+{ 
+    -webkit-animation-name: bounceInDown;
+	-moz-animation-name: bounceInDown;  
+    animation-name: bounceInDown; 
 }
 
 
-/*----CONTENT----*/
+/*---------------------------*/
+/*---------CONTENTS----------*/
+/*---------------------------*/
 #content
 {
 	/*border:1px solid white;*/
@@ -353,7 +452,9 @@ nav li a:hover
 	box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.66);
 }
 
+/*--------------*/
 /*---FOOTER----*/
+/*-------------*/
 footer
 {
 	/*border:1px solid #9F6;*/
@@ -744,6 +845,10 @@ footer
 
 * html .menu             { zoom: 1; } /* IE6 */
 *:first-child+html .menu { zoom: 1; } /* IE7 */
+/*---------------------------*/
+/*---slide  et banner-----*/
+/*---------------------------*/
+
 
 /*---------------------------*/
 /*---CONTENUES CATEGORIE-----*/

@@ -9,11 +9,11 @@
             </ul>
             <div class="clear"></div>
         </nav>
-        <div class="login" style="display:none">
+        <div class="login animated bounceInDown" style="display:none" >
             <form method="POST">
                 <input type="text" id="user" name="user" placeholder="Nom d'utilisateur" required="">
                 <input type="password" id="password" name="password" placeholder="Mot de passe" required="">
-                <input type="submit" value="S'identifier">
+                <input type="submit" value="OK">
             </form>
         </div>
         <div id="message">
