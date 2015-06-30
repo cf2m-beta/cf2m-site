@@ -1010,10 +1010,17 @@ footer
 
 .info li a
 {
-	width:285px;
+	/*width:285px;
 	height:40px;
 	display:block;
-	margin-bottom:13px;
+	margin-bottom:13px;*/
+	text-transform:uppercase;
+	font-weight:bold;
+	color:#666;
+	padding-left:10px;
+	margin-bottom:5px;
+	display:block;
+	font-size:1.2em;
 }
 
 .info li:nth-child(1)
@@ -1023,23 +1030,47 @@ footer
 .info li:nth-child(1) a
 {
 	background:url(../images/download.png) no-repeat left center;
+	width:285px;
+	height:40px;
+	display:block;
+	margin-bottom:13px;
 }
 
 .info li:nth-child(2) a
 {
-	background:url(../images/conditions.png) no-repeat left center;
+	/*background:url(../images/conditions.png) no-repeat left center;*/
+	border-left:5px solid #063;
+	border-bottom:1px dotted #666;
+}
+
+.info li:nth-child(2) a:hover
+{
+	color:#063;
 }
 
 .info li:nth-child(3) a
 {
-	background:url(../images/inscriptions.png) no-repeat left center;
+	/*background:url(../images/inscriptions.png) no-repeat left center;*/
+	border-left:5px solid #F90;
+	border-bottom:1px dotted #666;
 }
 
-.info li:nth-child(4)
+.info li:nth-child(3) a:hover
 {
-	margin-bottom:none;
-	background:url(../images/entreetest.png) no-repeat left center;
+	color: #F90;
 }
 
+.info li:nth-child(4) a
+{
+	/*background:url(../images/entreetest.png) no-repeat left center;*/
+	border-left:5px solid #36F;
+	border-bottom:1px dotted #666;
+}
+
+
+.info li:nth-child(4) a:hover
+{
+	color: #36F;
+}
 
 
