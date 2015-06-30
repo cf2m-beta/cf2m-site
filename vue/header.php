@@ -5,6 +5,7 @@
                 <li><a href="?menu=1">Accueil</a></li>
                 <li><a href="">Plan du site</a></li>
                 <li><a href="">Contactez-nous</a></li>
+                <li><a href="">Blog</a></li>
                 <?php print isset($_SESSION['login'])? '<li><a href="'.RACINE.'/include/logout.php" >Déconnexion</a></li' : '<li><a href="" class="connexion">Connexion</a></li'?>
             </ul>
             <div class="clear"></div>
@@ -15,8 +16,8 @@
                 <input type="password" id="password" name="password" placeholder="Mot de passe" required="">
                 <input type="submit" value="OK">
             </form>
-            <span  style="font-size:.85em">Se souvenir de moi</span>&nbsp;&nbsp;&nbsp;
-            <span  style="font-size:.85em">Mot de pass oublié</span>
+            <!--<span  style="font-size:.85em">Se souvenir de moi</span>&nbsp;&nbsp;&nbsp;
+            <span  style="font-size:.85em">Mot de pass oublié</span>-->
         </div>
         <div id="message">
             <?php print $connexion?>
@@ -38,13 +39,13 @@
     </div>
     <div class="clear"></div>
 
-
+    <?php print isset($_SESSION['login'])? '<a href="">Administration</a> | <a href="">Espace Formateur</a>' : ''?>
 </div>
 <div class="noprint" style="z-index:9998; position:relative;">		
         <?php
             print $menu_deroulant;
             
-            if($_COOKIE['dossier_parent'] == 'demploye'):
+            if($dossier_parent == 'demploye'):
         ?>
         
                 <div class="search">
@@ -67,5 +68,5 @@
 </div>
 
 <?php
-    print ($_COOKIE['dossier_parent'] == 'demploye')? $banner : '';
+    print ($dossier_parent == 'demploye')? $banner : '';
 ?>
