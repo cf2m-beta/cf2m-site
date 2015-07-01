@@ -31,7 +31,7 @@ function envoye_ajax(value,table,colonne,condition){
     }
     else{
         
-        req_xhr.open('POST',"./includes/envoyeAjax.php",true);
+        req_xhr.open('POST',"../include/envoyeAjax.php",true);
         req_xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         
         req_xhr.onreadystatechange = function(){
@@ -53,3 +53,18 @@ $('a.connexion').click(function(){
     $('div.login').toggle();
     return false;
 });
+
+$('.editable:not(".info")').click(function(){
+    $('.editable').css('display','block');
+    $(this).css('display','none');
+    $('.element_global').children('form').remove();
+    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='text'>"+$(this).find('p').text()+"</textarea><br><input type='submit' value='Envoyer'></form>");
+    return false;
+});
+
+/*
+$('form.envoye_ajax').submit(function(e){
+    alert();
+    e.stopPropagation();
+    return false;
+});*/
