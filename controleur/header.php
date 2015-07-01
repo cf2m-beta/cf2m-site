@@ -28,9 +28,19 @@
     $menu_deroulant = $_COOKIE['dossier_parent']== 'demploye' ? afficher_menu(0, 0, $pages) : '';
     
     //baniere
-    $banner='<div id="banner" class="slide">
-            <img src="../images/banner1.jpg" title="" />
-            </div>';
+    $banner="<div id='banner' class='slide'>
+                <div id='wowslider-container1'>
+                <div class='ws_images'><ul>
+                    <li><img src='".RACINE."slider/data1/images/banner1.jpg' alt='' title='' id='wows1_0'/></li>
+                    <li><img src='".RACINE."slider/data1/images/http.png' alt='' title='' id='wows1_1'/></a></li>
+                    <li><img src='".RACINE."slider/data1/images/lanterns.jpg' alt='' title='' id='wows1_2'/></li>
+                    </ul></div>
+                    <div class='ws_script' style='position:absolute;left:-99%'><a href='http://wowslider.com/vi'>css slider</a> by ANDREI v8.2</div>
+                    <div class='ws_shadow'></div>
+                </div>	
+            </div>
+        <script type='text/javascript' src='".RACINE."slider/engine1/wowslider.js'></script>
+	<script type='text/javascript' src='".RACINE."slider/engine1/script.js'></script>";
     if(isset($_GET['menu'])){
         if($_GET['menu']!=1){
             foreach ($pages as $key => $value){
