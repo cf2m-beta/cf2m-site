@@ -1191,4 +1191,40 @@ footer
 /*---------------------------*/
 /*---CONTENUES FORMATION-----*/
 /*---------------------------*/
+.content_miniature
+{
+	/*border:1px solid #F03;*/
+	width:285px;
+	float:left;
+	font-size:.95em;
+	line-height:1.5em;
+	margin:35px 0 0 35px;
+	color:#333;
+	height:250px;
+	border:1px solid #DDD;
+}
 
+.content_miniature h2
+{
+	color:#fff;
+	font-size:2em;
+	height:40px;
+	line-height:40px;
+	padding-left:20px;
+	background: rgb(255,176,57);
+	background: -moz-linear-gradient(left,  rgba(255,176,57,1) 0%, rgba(246,119,0,1) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,176,57,1)), color-stop(100%,rgba(246,119,0,1)));
+	background: -webkit-linear-gradient(left,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
+	background: -o-linear-gradient(left,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
+	background: -ms-linear-gradient(left,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
+	background: linear-gradient(to right,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb039', endColorstr='#f67700',GradientType=1 );
+}
+
+
+.content_miniature p
+{
+	font-size:1.1em;
+	text-align:justify;
+	padding:10px;
+}
