@@ -23,11 +23,11 @@
                <section>
                   <h4>Nos Formations</h4> 
                   <ul>
-                     <li><a href="<?php echo RACINE.'demploye/?menu=5' ?>">P.A.O</a></li> 
-                     <li><a href="<?php echo RACINE.'demploye/?menu=7' ?>">Aide-comptable</a></li>
+                     <li><a href="<?php echo RACINE.'demploye/?menu=7' ?>">Aide comptable</a></li>
                      <li><a href="<?php echo RACINE.'demploye/?menu=4' ?>">Développeur Web</a></li>
-                     <li><a href="<?php echo RACINE.'demploye/?menu=8' ?>">Technicien-Réseaux</a></li> 
-                     <li><a href="<?php echo RACINE.'demploye/?menu=6' ?>">Animateur MultiMédia</a></li>
+                     <li><a href="<?php echo RACINE.'demploye/?menu=5' ?>">Infographiste PAO</a></li> 
+                     <li><a href="<?php echo RACINE.'demploye/?menu=8' ?>">Technicien Réseau</a></li> 
+                     <li><a href="<?php echo RACINE.'demploye/?menu=6' ?>">Animateur Multimédia</a></li>
                   </ul>
                </section>
                
