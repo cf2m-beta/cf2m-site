@@ -203,76 +203,6 @@ nav li a:hover
 	height:20px;
 }
 
-.animated 
-{ 
-    -webkit-animation-duration: 1s;
-	-moz-animation-duration: 1s;  
-    animation-duration: 1s; 
-    -webkit-animation-fill-mode: both;
-	-moz-animation-fill-mode: both; 
-    animation-fill-mode: both; 
-} 
-
-@-webkit-keyframes bounceInDown 
-{ 
-   0% { 
-       opacity: 0; 
-        -webkit-transform: translateY(-2000px); 
-    } 
-    60% { 
-        opacity: 1; 
-        -webkit-transform: translateY(30px); 
-    } 
-    80% { 
-        -webkit-transform: translateY(-10px); 
-    } 
-    100% { 
-        -webkit-transform: translateY(0); 
-    } 
-} 
-
-@-moz-keyframes bounceInDown 
-{ 
-   0% { 
-       opacity: 0; 
-        -moz-transform: translateY(-2000px); 
-    } 
-    60% { 
-        opacity: 1; 
-        -moz-transform: translateY(30px); 
-    } 
-    80% { 
-        -moz-transform: translateY(-10px); 
-    } 
-    100% { 
-        -moz-transform: translateY(0); 
-    } 
-}
-
-@keyframes bounceInDown 
-{ 
-    0% { 
-        opacity: 0; 
-        transform: translateY(-2000px); 
-    } 
-    60% { 
-        opacity: 1; 
-        transform: translateY(30px); 
-    } 
-    80% { 
-        transform: translateY(-10px); 
-    } 
-    100% { 
-        transform: translateY(0); 
-    } 
-} 
-
-.bounceInDown 
-{ 
-    -webkit-animation-name: bounceInDown;
-	-moz-animation-name: bounceInDown;  
-    animation-name: bounceInDown; 
-}
 
 /*---------------------------*/
 /*-----RECHERCHE FORM-------*/
@@ -344,10 +274,128 @@ nav li a:hover
 	/*border:1px solid #F90;*/
 	height:150px;
 	background-color:#fff;
-	margin-top:5px;
-        
+	/*margin-top:10px;*/
 }
 
+.wdev
+{
+	background:url(../images/dev_web.jpg) no-repeat left center;
+	position:relative;
+}
+
+.wdev h1
+{
+	height:60px;
+	width:500px;
+	background-color: rgba(255, 153, 0, 0.6);
+	display:block;
+	position:absolute;
+	right:0;
+	bottom:20px;
+	color:#fff;
+	font-size:3em;
+	padding-right:10px;
+	text-align:right;
+	line-height:60px;
+	text-transform:uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#banner.pao
+{
+	background:url(../images/pao_ban.jpg) no-repeat left center;
+	position:relative;
+}
+
+.pao h1
+{
+	height:60px;
+	width:500px;
+	background-color: rgba(181, 0, 123, 0.6);
+	display:block;
+	position:absolute;
+	right:0;
+	bottom:20px;
+	color:#fff;
+	font-size:3em;
+	padding-right:10px;
+	text-align:right;
+	line-height:60px;
+	text-transform:uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.amm
+{
+	background:url(../images/aam_ban.jpg) no-repeat left center;
+	position:relative;
+}
+
+.amm h1
+{
+	height:60px;
+	width:500px;
+	background-color: rgba(25, 107,242, 0.6);
+	display:block;
+	position:absolute;
+	right:0;
+	bottom:20px;
+	color:#fff;
+	font-size:3em;
+	padding-right:10px;
+	text-align:right;
+	line-height:60px;
+	text-transform:uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.acompt
+{
+	background:url(../images/aide_ban.jpg) no-repeat left center;
+	position:relative;
+}
+
+.acompt h1
+{
+	height:60px;
+	width:500px;
+	background-color: rgba(204, 204, 0, 0.6);
+	display:block;
+	position:absolute;
+	right:0;
+	bottom:20px;
+	color:#fff;
+	font-size:3em;
+	padding-right:10px;
+	text-align:right;
+	line-height:60px;
+	text-transform:uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.res
+{
+	background:url(../images/rezo_ban.jpg) no-repeat left center;
+	position:relative;
+}
+
+.res h1
+{
+	height:60px;
+	width:500px;
+	background-color: rgba(255, 0, 0, 0.6);
+	display:block;
+	position:absolute;
+	right:0;
+	bottom:20px;
+	color:#fff;
+	font-size:3em;
+	padding-right:10px;
+	text-align:right;
+	line-height:60px;
+	text-transform:uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
 
 /*---------------------------*/
 /*---------CONTENTS----------*/
@@ -1074,4 +1122,7 @@ footer
 	color: #36F;
 }
 
+/*---------------------------*/
+/*---CONTENUES FORMATION-----*/
+/*---------------------------*/
 
