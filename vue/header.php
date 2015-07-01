@@ -10,7 +10,7 @@
             </ul>
             <div class="clear"></div>
         </nav>
-        <div class="login animated bounceInDown" style="display:none" >
+        <div class="login" style="display:none" >
             <form method="POST">
                 <input type="text" id="user" name="user" placeholder="Nom d'utilisateur" required="">
                 <input type="password" id="password" name="password" placeholder="Mot de passe" required="">
@@ -22,6 +22,7 @@
         <div id="message">
             <?php print $connexion?>
         </div>
+      
         
         <div class="cf2m">
             <!--<h2>cf2m c'est aussi</h2>-->
@@ -32,16 +33,20 @@
             </ul>
         </div>
         <div class="clear"></div>
+          <div class="lolo">
+             <?php
+				//boutons admin et espace formateur
+				print isset($_SESSION['login'])? ($_SESSION['permission']== 1 || $_SESSION['permission']== 2) ? 
+				'<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>'
+				  : '<a href="">Espace Formateur</a>' : ''
+	        ?>
+        </div>
     </div>
     <div class="logo">
         <a href="<?php print RACINE ?>" id="logo"><span class="hidden">Page d'accueil</span></a>
         <h2>Formations Professionnelles en Informatique</h2>
     </div>
-    <?php
-    //boutons admin et espace formateur
-    print isset($_SESSION['login'])? ($_SESSION['permission']== 1 || $_SESSION['permission']== 2) ? '<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>'
-                                                                                                        : '<a href="">Espace Formateur</a>' 
-                                          : ''?>
+    
     <div class="clear"></div>
 </div>
 <div class="noprint" style="z-index:9998; position:relative;">		
