@@ -12,9 +12,11 @@
                 if ($parent == $noeud['parent']) {
 
                 if ($niveau_precedent < $niveau) $html .= "\n<ul>\n";
-
-                $html .= "<li><a href='?menu=".$noeud['id']."'>" . $noeud['titre']."</a>";
-
+                if($noeud['url']=='employe'){
+                    $html .= "<li><a href='".RACINE.$noeud['url'].'/'."'>" . $noeud['titre']."</a>";
+                }else{
+                    $html .= "<li><a href='?menu=".$noeud['id']."'>" . $noeud['titre']."</a>";
+                }
                 $niveau_precedent = $niveau;
 
                 $html .= afficher_menu($noeud['id'], ($niveau + 1), $array);

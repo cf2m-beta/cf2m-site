@@ -37,9 +37,12 @@
         <a href="<?php print RACINE ?>" id="logo"><span class="hidden">Page d'accueil</span></a>
         <h2>Formations Professionnelles en Informatique</h2>
     </div>
+    <?php
+    //boutons admin et espace formateur
+    print isset($_SESSION['login'])? ($_SESSION['permission']== 1 || $_SESSION['permission']== 2) ? '<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>'
+                                                                                                        : '<a href="">Espace Formateur</a>' 
+                                          : ''?>
     <div class="clear"></div>
-
-    <?php print isset($_SESSION['login'])? '<a href="">Administration</a> | <a href="">Espace Formateur</a>' : ''?>
 </div>
 <div class="noprint" style="z-index:9998; position:relative;">		
         <?php

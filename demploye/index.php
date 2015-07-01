@@ -3,7 +3,7 @@
     include_once '../include/config.php';
     include_once '../modele/fonctions-db.php';
     include_once '../include/fonctions.php';
-    
+    session_start();
     $array_dirname = explode(DIRECTORY_SEPARATOR, dirname(__FILE__));
     $dossier_parent = array_pop($array_dirname);
     
@@ -15,8 +15,12 @@
         $i++;
     }
     
-    $content= "affichage contenu par defaut Demandeur d'emploi";
+    $content = "affichage contenu par defaut Demandeur d'emploi";
     
+    $editable = isset($_SESSION['login']) && isset($_GET['admin']) ? (($_SESSION['permission'] == 1 && $_SESSION['permission'] == $_GET['admin']) || ($_SESSION['permission']== 2 && $_SESSION['permission'] == $_GET['admin'])) ? ' editable'
+                                                                                                      : '' 
+                                          : '';
+            
     if(!isset($_GET['menu'])){
         //!!!!!!!!!!!!!!!!!!!!! affichage page id 1 (formation)    
         $content = '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>';
@@ -25,14 +29,13 @@
         $mysqli_result_texte = select('texte', '*', "WHERE page_id=1");
         if(!is_string($mysqli_result_texte)){
             while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
-                $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
+                $content.= '<div class="element_global"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
                 $content.= $un_texte['contenu'];
-                $content.= '</'.$un_texte['element'].'>';
+                $content.= '</'.$un_texte['element'].'></div>';
             }
         }
         include_once 'controleur/index.php';
     }else{
-        
         foreach($pages AS $value){
             if($_GET['menu']===$value['id']){
                 $content =($_GET['menu']==1)? '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>':'';
@@ -41,7 +44,7 @@
                 $mysqli_result_texte = select('texte', '*', "WHERE page_id='".$value['id']."'");
                 if(!is_string($mysqli_result_texte)){
                     while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
-                        $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
+                        $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
                         $content.= $un_texte['contenu'];
                         $content.= '</'.$un_texte['element'].'>';
                     }
