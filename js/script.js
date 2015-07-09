@@ -21,8 +21,6 @@ function cree_xhr(){
     return sortie_xhr;
 };
 
-
-//EXEMPLE
 function envoye_ajax(value,table,colonne,condition){
     var req_xhr = cree_xhr();
     var reponse = 'false';
@@ -54,17 +52,16 @@ $('a.connexion').click(function(){
     return false;
 });
 
-$('.editable:not(".info")').click(function(){
+$('.editable:not(".info")').dblclick(function(){
     $('.editable').css('display','block');
     $(this).css('display','none');
-    $('.element_global').children('form').remove();
-    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='text'>"+$(this).find('p').text()+"</textarea><br><input type='submit' value='Envoyer'></form>");
-    return false;
+    $('.element_global').children('.form').remove();
+    $(this).parent().append("<div class='form'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='text'>"+$(this).find('p').text()+"</textarea><br><button class='envoyer'>Envoyer</button></div>");
 });
 
-/*
-$('form.envoye_ajax').submit(function(e){
-    alert();
-    e.stopPropagation();
-    return false;
-});*/
+//envoye de données
+$('div.element_global').on('click', 'button.envoyer',function(event){
+    event.stopPropagation();
+    envoye_ajax(new_data,'entite', colonne, row_id);
+    console.log('gggg');
+});
