@@ -26,11 +26,17 @@
         $content = '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>';
         //pour l'affichage contenu html venant de la BD
         //AJOUTER HTML DECODE
-        $mysqli_result_texte = select('texte', '*', "WHERE page_id=1");
+        $mysqli_result_texte = select('texte t',
+                                    'p.id, t.element, t.classe, t.titre, t.contenu',
+                                    "INNER JOIN page p ON t.titre = p.titre
+                                     WHERE t.page_id = 1
+                                     ORDER BY t.ordre");
         if(!is_string($mysqli_result_texte)){
             while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
                 $content.= '<div class="element_global"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
-                $content.= $un_texte['contenu'];
+                $content.= $un_texte['titre'] != '' ? '<a href="?menu='.$un_texte['id'].'"></a><h2><a href="?menu='.$un_texte['id'].'">'.$un_texte['titre'].'</a></h2>' :'';
+                $content.= '<p>'.$un_texte['contenu'].'</p>';
+                $content.= '<span><a class="liremore" href="?menu='.$un_texte['id'].'">Pour plus ici... [+]</a> </span>';
                 $content.= '</'.$un_texte['element'].'></div>';
             }
         }
@@ -41,12 +47,18 @@
                 $content =($_GET['menu']==1)? '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>':'';
                 //pour l'affichage contenu html venant de la BD
                 //AJOUTER HTML DECODE
-                $mysqli_result_texte = select('texte', '*', "WHERE page_id='".$value['id']."'");
+                $mysqli_result_texte = select('texte t',
+                                            'p.id, t.element, t.classe, t.titre, t.contenu',
+                                            "INNER JOIN page p ON t.titre = p.titre
+                                            WHERE t.page_id = ".$value['id']."
+                                            ORDER BY t.ordre");
                 if(!is_string($mysqli_result_texte)){
                     while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
-                        $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
-                        $content.= $un_texte['contenu'];
-                        $content.= '</'.$un_texte['element'].'>';
+                        $content.= '<div class="element_global"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
+                        $content.= $un_texte['titre'] != '' ? '<a href="?menu='.$un_texte['id'].'"></a><h2><a href="?menu='.$un_texte['id'].'">'.$un_texte['titre'].'</a></h2>' :'';
+                        $content.= '<p>'.$un_texte['contenu'].'</p>';
+                        $content.= '<span><a class="liremore" href="?menu='.$un_texte['id'].'">Pour plus ici... [+]</a> </span>';
+                        $content.= '</'.$un_texte['element'].'></div>';
                     }
                 }
                 include 'controleur/index.php';

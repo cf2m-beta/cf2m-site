@@ -1001,16 +1001,22 @@ footer
 	height:200px;
 }
 
+/*bidouillage andrei*/
+.formation_miniature:first-child{
+    width:285px;
+    height:100px;
+    display:block;
+}
+
 .formation_miniature>a:nth-child(1)
 {
 	width:285px;
 	height:100px;
-	/*border:1px solid gray;*/
 	display:block;
 	margin-bottom:10px;
-    /*background:url(../images/sample.jpg) no-repeat center;
-		background-size:cover;*/
 }
+
+
 
 .formation_miniature>*:nth-child(2)
 {
@@ -1062,61 +1068,60 @@ footer
 	font-size:1em;
 }
 
-.web1
+/*bidouillage andrei*/
+.web:first-child
 {
 	background:url(../images/sample.jpg) no-repeat center;
-	width:285px;
-	height:100px;
-	display:block;
-	/*background-size:cover;*/
 }
 
-.web1:hover
+.web:first-child:hover
 {
-	background:url(../images/sample-over.jpg) no-repeat center ;
+	background:url(../images/sample-over.jpg) no-repeat center;
 }
 
-.pao1
+.pao:first-child
 {
 	background:url(../images/pao.jpg) no-repeat center;
 }
 
-.pao1:hover
+.pao:first-child:hover
 {
 	background:url(../images/pao-over.jpg) no-repeat center;
 }
 
-.amm1
+.amm:first-child
 {
 	background:url(../images/amm.jpg) no-repeat center;
 }
 
-.amm1:hover
+.amm:first-child:hover
 {
 	background:url(../images/amm-over.jpg) no-repeat center;
 }
 
-.aide1
+.aide:first-child
 {
 	background:url(../images/aide.jpg) no-repeat center;
 	border:1px solid #CCC;
 }
 
-.aide1:hover
+.aide:first-child:hover
 {
 	background:url(../images/aide-over.jpg) no-repeat center;
 }
 
-.rezo1
+.rezo:first-child
 {
 	background:url(../images/rezo.jpg) no-repeat center;
 	border:1px solid #CCC;
 }
 
-.rezo1:hover
+.rezo:first-child:hover
 {
 	background:url(../images/rezo-over.jpg) no-repeat center;
 }
+/* FIN bidouillage andrei*/
+
 /*-----section information-----*/
 .info
 {

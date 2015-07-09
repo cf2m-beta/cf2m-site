@@ -82,7 +82,6 @@
             <span class="made">Site réalisé par les stagiaires du cf2m</span>
         </footer>
 
-        <script src="<?php print RACINE?>js/jquery-1.9.1.min.js"></script>
         <script src="<?php print RACINE?>js/script.js"></script>
         
         </div>
