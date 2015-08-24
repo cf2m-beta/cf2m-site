@@ -54,17 +54,13 @@ $('a.connexion').click(function(){
     return false;
 });
 
-$('.editable:not(".info")').click(function(){
+$('.editable:not(".info")').dblclick(function(){
     $('.editable').css('display','block');
     $(this).css('display','none');
     $('.element_global').children('form').remove();
-    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='text'>"+$(this).find('p').text()+"</textarea><br><input type='submit' value='Envoyer'></form>");
+    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='text'>"+$(this).find('p').text()+"</textarea><br>\n\
+        <input onclick='console.log($(this).prev().prev().prev().prev().val());  return false;' type='submit' value='Envoyer'></form>");
     return false;
 });
 
-/*
-$('form.envoye_ajax').submit(function(e){
-    alert();
-    e.stopPropagation();
-    return false;
-});*/
+//envoye_ajax('"+$(this).siblings('input[name="titre"]').val()+"','texte','titre',condition);

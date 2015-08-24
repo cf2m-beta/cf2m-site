@@ -44,9 +44,9 @@
                 $mysqli_result_texte = select('texte', '*', "WHERE page_id='".$value['id']."'");
                 if(!is_string($mysqli_result_texte)){
                     while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
-                        $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
+                        $content.= '<div class="element_global"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
                         $content.= $un_texte['contenu'];
-                        $content.= '</'.$un_texte['element'].'>';
+                        $content.= '</'.$un_texte['element'].'></div>';
                     }
                 }
                 include 'controleur/index.php';
