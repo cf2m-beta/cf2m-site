@@ -1,4 +1,6 @@
 <?php
+    /* NON utilisé, à enlever plus tard !!!
+     * 
     $retour_header_texte = '';
     if(isset($_POST['ndc_formateur'])){
         $ndc=  strip_tags(trim($_POST['ndc_formateur']));
@@ -24,7 +26,8 @@
             $i++;
         }
     }
-    
+    */
+
     $menu_deroulant = $dossier_parent == 'demploye' ? afficher_menu(0, 0, $pages) : '';
     
     //baniere
@@ -57,7 +60,7 @@
     if(isset($_POST['user'])){
         $user =  strip_tags(trim($_POST['user']));
         $password = strip_tags(trim($_POST['password']));
-        if(!is_string($db_user = select('utilisateur', '*', "WHERE nom_utilisateur = '$user' AND mot_passe = '$password'"))){
+        if(!is_string($db_user = select('formateur', '*', "WHERE nom_utilisateur = '$user' AND mot_passe = '$password'"))){
             while ($one_db_user=  mysqli_fetch_assoc($db_user)){
                 $_SESSION=$one_db_user;    
             }
