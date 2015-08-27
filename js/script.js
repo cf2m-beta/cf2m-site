@@ -25,7 +25,7 @@ function cree_xhr(){
 //EXEMPLE
 function envoye_ajax(value,table,colonne,condition){
     var req_xhr = cree_xhr();
-    var reponse = 'false';
+    var reponse = false;
     if (req_xhr===null){
         alert("Votre navigateur ne supporte pas Ajax");
     }
@@ -45,7 +45,7 @@ function envoye_ajax(value,table,colonne,condition){
        
         req_xhr.send("value="+value+"&table="+table+"&colonne="+colonne+"&condition="+condition);
     }
-    return (!reponse)? 'ko' :reponse;
+    return (!reponse)? 'ko' : reponse;
 }
 
 //aparition formulaire de connexion
@@ -54,13 +54,21 @@ $('a.connexion').click(function(){
     return false;
 });
 
+//aparition formulaire modification texte formation
 $('.editable:not(".info")').dblclick(function(){
     $('.editable').css('display','block');
     $(this).css('display','none');
     $('.element_global').children('form').remove();
     $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='text'>"+$(this).find('p').text()+"</textarea><br>\n\
-        <input onclick='console.log($(this).prev().prev().prev().prev().val());  return false;' type='submit' value='Envoyer'></form>");
+        <input type='submit' value='Envoyer'></form>");
     return false;
 });
 
-//envoye_ajax('"+$(this).siblings('input[name="titre"]').val()+"','texte','titre',condition);
+//envoye formulaire modification texte formation
+$(".element_global").on("click", "input[type='submit']",function(){
+    console.log($(this).siblings('input[name="titre"]').val());
+    var val = [$(this).siblings('input[name="titre"]').val(),$(this).siblings('textarea[name="text"]').val()];
+    var colonne = [$(this).siblings('input[name="titre"]').attr('name'), $(this).siblings('textarea[name="text"]').attr('name')];
+    console.log('result envoye: '+envoye_ajax(val,'texte', colonne,$(this).parent().parent().data('id')));
+    return false;
+});
