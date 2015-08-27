@@ -39,7 +39,7 @@ a img
 
 .liremore
 {
-	color: #F90;
+	color: #C00;
 	font-size:.9em;
 	text-decoration:none;
 }
@@ -130,7 +130,7 @@ nav li a:hover
 .logo
 {
 	/*border:1px solid #960;*/
-	width:300px;
+	width:350px;
 	margin:25px 0 0 40px;
 	float:left;
 }
@@ -147,6 +147,8 @@ nav li a:hover
 {
 	color:#fff;
 	margin:5px 0;
+	font-size:2em;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 .cf2m
@@ -452,13 +454,21 @@ nav li a:hover
 	color:#666;
 }
 
+h2.intro 
+{
+	text-transform:uppercase;
+	padding-top:30px;
+	font-size:1.3em;
+	
+}
+
 .demploi
 {
 	/*border:1px solid #FC0;*/
 	width:470px;
 	height:380px;
 	float:left;
-	margin:20px 0 20px 20px;
+	margin:10px 0 20px 20px;
 }
 
 .demploi a:last-child
@@ -482,6 +492,8 @@ nav li a:hover
 	margin-top:50px;
 	text-transform:uppercase;
 	color:#369;
+	font-size:.9em;
+	font-weight:bold;
 }
 
 .demploi a
@@ -503,8 +515,17 @@ nav li a:hover
 	width:470px;
 	height:380px;
 	float:right;
-	margin:20px 20px 20px 0px;
+	margin:10px 20px 20px 0px;
+	padding-left:15px;
     position:relative;
+}
+
+.toggle
+{
+	/*border:1px solid red;*/
+	color:#666;
+	margin-top:10px;
+	font-size:1.2em;
 }
 
 .picto
@@ -542,13 +563,13 @@ nav li a:hover
 
 .descript
 {
-	/*border:1px solid #F63;*/
-	width:600px;
+	width:700px;
 	margin:0 auto;
-	color:#333;
-	border:1px solid #CCC;
-	border-radius:5px;
+	color:#036;
+	text-align:left;
 	padding:5px;
+	/*border:1px solid #CCC;*/
+	/*border-radius:5px;*/
 	/*box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.66);*/
 }
 
@@ -610,19 +631,19 @@ footer
 {
 	float:left;
 	width:300px;
-	/*border-left:1px solid #999;*/
 	margin:10px 0px;
 	padding-left:10px;
 	margin-left:15px;
+	/*border-left:1px solid #999;*/
 }
 
 .footer-top section h4
 {
 	font-family: 'Questrial', sans-serif;
 	font-size:1.5em;
-	color:#F60;
+	color:#C00;
 	margin:10px 0;
-	border-bottom:1px solid #F60;
+	border-bottom:1px solid #C00;
 }
 
 .footer-top section:nth-child(1)

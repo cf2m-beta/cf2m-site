@@ -74,8 +74,8 @@
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
                     <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <!--<li><a href=""></a></li>
+                    <li><a href=""></a></li>-->
                  </ul>
                </section>
             </div>
@@ -84,6 +84,7 @@
 
         <script src="<?php print RACINE?>js/jquery-1.9.1.min.js"></script>
         <script src="<?php print RACINE?>js/script.js"></script>
+        <script type="text/javascript" src="<?php print RACINE ?>/js/toggle.js"></script>
         
         </div>
     </body>
