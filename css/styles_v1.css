@@ -434,11 +434,12 @@ nav li a:hover
 #content
 {
 	/*border:1px solid white;*/
-	min-height:500px;
+	/*min-height:550px;*/
 	background:#fff;
 	margin:10px 0 10px 0;
-	padding-bottom:20px;
+	padding-bottom:40px;
 	position:relative;
+	overflow:hidden;
 }
 
 .middle-content
@@ -583,7 +584,7 @@ h2.intro
 	float:left;
 	font-size:.95em;
 	line-height:1.5em;
-	margin:35px 0 0 35px;
+	margin:35px 0 10px 35px;
 	color:#333;
 	height:200px;
 }
@@ -1219,13 +1220,15 @@ footer
 {
 	/*border:1px solid #F03;*/
 	width:285px;
-	float:left;
+	/*float:left;*/
 	font-size:.95em;
 	line-height:1.5em;
-	margin:35px 0 0 35px;
+	padding-bottom:10px;
 	color:#333;
-	height:250px;
 	border:1px solid #DDD;
+	/*margin:35px 0 0 35px;*/
+	/*height:250px;*/
+	
 }
 
 .content_miniature h2
