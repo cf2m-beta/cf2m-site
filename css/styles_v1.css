@@ -434,7 +434,7 @@ nav li a:hover
 #content
 {
 	/*border:1px solid white;*/
-	/*min-height:550px;*/
+	min-height:550px;
 	background:#fff;
 	margin:10px 0 10px 0;
 	padding-bottom:40px;
@@ -1219,7 +1219,7 @@ footer
 .content_miniature
 {
 	/*border:1px solid #F03;*/
-	width:285px;
+	width:300px;
 	/*float:left;*/
 	font-size:.95em;
 	line-height:1.5em;
@@ -1316,4 +1316,6 @@ footer
 	font-size:1.1em;
 	text-align:justify;
 	padding:10px;
+	line-height:1.2em;
+	color:#666;
 }
