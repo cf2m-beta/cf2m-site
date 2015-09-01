@@ -1010,6 +1010,7 @@ footer
 	font-size:1.6em;
 	color:#fff;
 	background:rgba(0, 0, 0, 0.8);
+	flex: 100%;
 }
 
 .bgBtformation
@@ -1229,7 +1230,7 @@ footer
 	color:#333;
 	/*border:1px solid #DDD;*/
 	/*margin:35px 0 0 35px;*/
-	height:250px;
+	
 	
 }
 
@@ -1318,6 +1319,7 @@ footer
 	font-size:1.1em;
 	/*text-align:justify;*/
 	padding-top:10px;
-	line-height:1.2em;
+	line-height:1.3em;
 	color:#666;
+	text-indent:10px;
 }
