@@ -1,6 +1,4 @@
 <?php
-    /* NON utilisé, à enlever plus tard !!!
-     * 
     $retour_header_texte = '';
     if(isset($_POST['ndc_formateur'])){
         $ndc=  strip_tags(trim($_POST['ndc_formateur']));
@@ -26,7 +24,7 @@
             $i++;
         }
     }
-    */
+    
 
     $menu_deroulant = $dossier_parent == 'demploye' ? afficher_menu(0, 0, $pages) : '';
     

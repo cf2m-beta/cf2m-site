@@ -48,7 +48,7 @@
         if(mysqli_query($db,$query)){
             return 'Mise à jour réussie';
         }else{
-            return 'Mise à jour echouée :'.$query;
+            return 'Mise à jour echouée :'.$query.mysqli_error($db);
         }
     }
 

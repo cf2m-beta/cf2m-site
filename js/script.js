@@ -42,8 +42,21 @@ function envoye_ajax(value,table,colonne,condition){
                 reponse = value;
             }
         };
-       
-        req_xhr.send("value="+value+"&table="+table+"&colonne="+colonne+"&condition="+condition);
+        var compt_val = value.length;
+        var chaine ="?";
+        for(var i = 0 ; i < compt_val ; i++){
+            chaine+="&value[]="+value[i];
+        }
+        
+        chaine+= "&table="+table;
+        
+        for(var i = 0 ; i < compt_val ; i++){
+            chaine+="&colonne[]="+colonne[i];
+        }
+        
+        chaine+= "&condition="+condition;
+                
+        req_xhr.send(chaine);
     }
     return (!reponse)? 'ko' : reponse;
 }
@@ -59,7 +72,7 @@ $('.editable:not(".info")').dblclick(function(){
     $('.editable').css('display','block');
     $(this).css('display','none');
     $('.element_global').children('form').remove();
-    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='text'>"+$(this).find('p').text()+"</textarea><br>\n\
+    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='texte'>"+$(this).find('p').text()+"</textarea><br>\n\
         <input type='submit' value='Envoyer'></form>");
     return false;
 });
@@ -67,8 +80,8 @@ $('.editable:not(".info")').dblclick(function(){
 //envoye formulaire modification texte formation
 $(".element_global").on("click", "input[type='submit']",function(){
     console.log($(this).siblings('input[name="titre"]').val());
-    var val = [$(this).siblings('input[name="titre"]').val(),$(this).siblings('textarea[name="text"]').val()];
-    var colonne = [$(this).siblings('input[name="titre"]').attr('name'), $(this).siblings('textarea[name="text"]').attr('name')];
+    val = new Array($(this).siblings('input[name="titre"]').val(),$(this).siblings('textarea[name="texte"]').val());
+    colonne = [$(this).siblings('input[name="titre"]').attr('name'), $(this).siblings('textarea[name="texte"]').attr('name')];
     console.log('result envoye: '+envoye_ajax(val,'texte', colonne,$(this).parent().parent().data('id')));
     return false;
 });
