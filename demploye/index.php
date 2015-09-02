@@ -34,7 +34,7 @@
                 $content.= '<div class="element_global" data-id="'.$un_texte['id'].'"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
                 $content.= "<a href='?menu=".$un_texte['page_id']."' class='$classe[1]1'></a>";
                 $content.= "<h2><a href=''>".$un_texte['titre']."</a></h2>";
-                $content.= "<p>".$un_texte['texte']."</p>";
+                $content.= "<p>".nl2br($un_texte['texte'])."</p>";
                 $content.= "<span><a class='liremore' href=''>Pour plus ici... [+]</a> </span>";
                 $content.= '</'.$un_texte['element'].'></div>';
             }
@@ -51,7 +51,7 @@
                     while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
                         $classe = explode (' ',$un_texte['classe']);
                         
-                        $content.= '<div class="element_global"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
+                        $content.= '<div class="element_global" data-id="'.$un_texte['id'].'"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
                         $content.= "<a href='' class='$classe[1]1'></a>";
                         $content.= "<h2><a href=''>".$un_texte['titre']."</a></h2>";
                         $content.= "<p>".nl2br($un_texte['texte'])."</p>";

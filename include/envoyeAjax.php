@@ -11,15 +11,15 @@ if(isset($_POST["value"])){
     
     for($i=0;$i<count($colonne);$i++){
         if($i==0)
-            $update_string += $colonne[$i]." = '".$value[$i]."'";
+            $update_string .= $colonne[$i]." = '".$value[$i]."'";
         else
-            $update_string += ", ".$colonne[$i]." = '".$value[$i]."'";
+            $update_string .= ", ".$colonne[$i]." = '".$value[$i]."'";
+        
     }
-    
+    print('**************');
     print update($table, $update_string, "WHERE id=$condition");
-    print 'HOLA'.$update_string.'!';
-    print(get_type($value));
-    
+    print('**************');
+    print 'HOLA---------'.$update_string.'!-------';
 }else{
     print "Données non arrivées ...";
 }

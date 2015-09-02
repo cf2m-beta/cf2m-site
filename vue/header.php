@@ -5,7 +5,7 @@
                 <li><a href="?menu=1">Accueil</a></li>
                 <li><a href="">Plan du site</a></li>
                 <li><a href="">Contactez-nous</a></li>
-                <li><a href="http://blog.cf2m.be/" target="_black">Blog</a></li>
+                <li><a href="http://blog.cf2m.be/" target="_blank">Blog</a></li>
                 <?php print isset($_SESSION['login'])? '<li><a href="'.RACINE.'/include/logout.php" >Déconnexion</a></li' : '<li><a href="" class="connexion">Connexion</a></li'?>
             </ul>
             <div class="clear"></div>
@@ -37,7 +37,7 @@
              <?php
 				//boutons admin et espace formateur
 				print isset($_SESSION['login'])? ($_SESSION['permission']== 1 || $_SESSION['permission']== 2) ? 
-				'<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>'
+				(isset($_GET['menu']) ? '<a href="?menu='.$_GET['menu'].'&admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>' : '<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>')
 				  : '<a href="">Espace Formateur</a>' : ''
 	        ?>
         </div>
