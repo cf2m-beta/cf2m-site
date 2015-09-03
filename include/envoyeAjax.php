@@ -16,10 +16,11 @@ if(isset($_POST["value"])){
             $update_string .= ", ".$colonne[$i]." = '".$value[$i]."'";
         
     }
-    print('**************');
+    
+    /*print('**************');*/
     print update($table, $update_string, "WHERE id=$condition");
-    print('**************');
-    print 'HOLA---------'.$update_string.'!-------';
+    /*print('**************');
+    print 'HOLA---------'.$update_string.'!-------';*/
 }else{
     print "Données non arrivées ...";
 }

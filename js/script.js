@@ -25,7 +25,6 @@ function cree_xhr(){
 //EXEMPLE
 function envoye_ajax(value,table,colonne,condition){
     var req_xhr = cree_xhr();
-    var reponse = false;
     if (req_xhr===null){
         alert("Votre navigateur ne supporte pas Ajax");
     }
@@ -38,8 +37,9 @@ function envoye_ajax(value,table,colonne,condition){
             
             if (req_xhr.readyState===4 && req_xhr.status === 200) {
                
-                console.log(req_xhr.responseText);
-                reponse = value;
+                if(req_xhr.responseText !=='Mise à jour réussie'){
+                    alert('Mise à jour échouée, veuillez recomencer');
+                }
             }
         };
         var compt_val = value.length;
@@ -58,7 +58,6 @@ function envoye_ajax(value,table,colonne,condition){
                 
         req_xhr.send(chaine);
     }
-    return (!reponse)? 'ko' : reponse;
 }
 
 //aparition formulaire de connexion
@@ -82,6 +81,10 @@ $(".element_global").on("click", "input[type='submit']",function(){
     console.log($(this).siblings('input[name="titre"]').val());
     val = new Array($(this).siblings('input[name="titre"]').val(),$(this).siblings('textarea[name="texte"]').val());
     colonne = [$(this).siblings('input[name="titre"]').attr('name'), $(this).siblings('textarea[name="texte"]').attr('name')];
-    console.log('result envoye: '+envoye_ajax(val,'texte', colonne,$(this).parent().parent().data('id')));
+    envoye_ajax(val,'texte', colonne,$(this).parent().parent().data('id'));
+    $(this).parent().siblings().css('display','block');
+    $(this).parent().siblings().find('h2 a').text(val[0]);
+    $(this).parent().siblings().find('p').text(val[1]);
+    $(this).parent().remove();
     return false;
 });
