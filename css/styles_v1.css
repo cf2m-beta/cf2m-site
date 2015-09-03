@@ -581,7 +581,7 @@ h2.intro
 /*---------------------------*/
 /*------ADMINISTRATION-------*/
 /*---------------------------*/
-.element_global
+element_global
 {
 	/*border:1px solid #F03;*/
 	width:285px;
@@ -1020,13 +1020,13 @@ footer
 	border:1px solid #CF0;
 }
 
-.formation_miniature
+.formation_miniature, .envoye_ajax
 {
 	width:285px;
 	float:left;
 	font-size:.95em;
 	line-height:1.5em;
-	/*margin:35px 0 0 35px;*/
+	margin:35px 0 0 35px;
 	color:#333;
 	height:200px;
 }
@@ -1223,11 +1223,12 @@ footer
 /*---------------------------*/
 .content_miniature
 {
-	width:300px;
+	width:290px;
 	font-size:.95em;
 	line-height:1.5em;
 	padding-bottom:10px;
 	color:#333;
+	margin:35px 0 0 35px;
 	/*margin:35px 0 0 35px;*/
 	/*border:1px solid #F03;*/
 	/*float:left;*/
@@ -1320,8 +1321,45 @@ footer
 	padding-top:10px;
 	line-height:1.4em;
 	color:#333;
-	text-indent:10px;
+	/*text-indent:10px;*/
 	font-family:Verdana, Geneva, sans-serif;
 }
 
-/**/
+/*===========================*/
+/*===== LES ONGLETS  ========*/
+/*===========================*/
+
+.page-web-onglet
+{
+	border:1px solid red;
+	width:600px;
+}
+
+.information
+{
+	border:1px solid red;
+	width:900px;
+	margin:35px 0 0 35px;
+}
+
+/*===========================*/
+/*=== LES PAGES INTERNES  ===*/
+/*===========================*/
+
+.apropos
+{
+	margin: 20px 35px 0 100px;
+	border-left:8px solid #CDCDCD;
+	padding-left:20px;
+}
+
+.apropos p
+{
+	text-align:justify;
+}
+
+.apropos h2
+{
+	font-family: "Yanone Kaffeesatz",sans-serif;
+	font-size:2em;
+}
