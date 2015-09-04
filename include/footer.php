@@ -43,11 +43,6 @@
                         Zorem ipsum dolor sit amet, consectetur adipiscing elit. 
                       Aenean malesuada purus.
                    </p>
-                   <p> 
-                      <span>01 Aout 2015</span>
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Aenean malesuada purus et luctus.
-                   </p>
                </section>
                 <div class="clear"></div>
             </div>
