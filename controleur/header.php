@@ -68,4 +68,4 @@
         }
     }
     
-    include_once ($dossier_parent=='cf2m-site')? '/vue/header.php': '../vue/header.php';
+    include_once ($dossier_parent=='cf2m-site')? 'vue/header.php': '../vue/header.php';

@@ -1153,7 +1153,7 @@ footer
 	/*background:#CCC;*/
 }
 
-.info li a
+.informa li a
 {
 	/*width:285px;
 	height:40px;
@@ -1168,11 +1168,11 @@ footer
 	font-size:1.2em;
 }
 
-.info li:nth-child(1)
+.informa li:nth-child(1)
 {
 }
 
-.info li:nth-child(1) a
+.informa li:nth-child(1) a
 {
 	background:url(../images/download.png) no-repeat left center;
 	width:285px;
@@ -1181,31 +1181,31 @@ footer
 	margin-bottom:13px;
 }
 
-.info li:nth-child(2) a
+.informa li:nth-child(2) a
 {
 	/*background:url(../images/conditions.png) no-repeat left center;*/
 	border-left:5px solid #063;
 	border-bottom:1px dotted #666;
 }
 
-.info li:nth-child(2) a:hover
+.informa li:nth-child(2) a:hover
 {
 	color:#063;
 }
 
-.info li:nth-child(3) a
+.informa li:nth-child(3) a
 {
 	/*background:url(../images/inscriptions.png) no-repeat left center;*/
 	border-left:5px solid #F90;
 	border-bottom:1px dotted #666;
 }
 
-.info li:nth-child(3) a:hover
+.informa li:nth-child(3) a:hover
 {
 	color: #F90;
 }
 
-.info li:nth-child(4) a
+.informa li:nth-child(4) a
 {
 	/*background:url(../images/entreetest.png) no-repeat left center;*/
 	border-left:5px solid #36F;
@@ -1213,7 +1213,7 @@ footer
 }
 
 
-.info li:nth-child(4) a:hover
+.informa li:nth-child(4) a:hover
 {
 	color: #36F;
 }
@@ -1246,6 +1246,11 @@ footer
 	height:30px;
 	line-height:30px;
 	padding-left:20px;
+}
+
+.content_miniature span
+{
+	visibility:hidden;
 }
 
 .page-web h2
@@ -1319,7 +1324,7 @@ footer
 	font-size:1.05em;
 	/*text-align:justify;*/
 	padding-top:10px;
-	line-height:1.4em;
+	line-height:1.5em;
 	color:#333;
 	/*text-indent:10px;*/
 	font-family:Verdana, Geneva, sans-serif;
@@ -1335,31 +1340,68 @@ footer
 	width:600px;
 }
 
-.information
-{
-	border:1px solid red;
-	width:900px;
-	margin:35px 0 0 35px;
-}
 
 /*===========================*/
 /*=== LES PAGES INTERNES  ===*/
 /*===========================*/
 
-.apropos
+/*-------a propos----------*/
+.apropos, .procedures
 {
-	margin: 20px 35px 0 100px;
+	margin: 40px 35px 0 100px;
 	border-left:8px solid #CDCDCD;
-	padding-left:20px;
+	padding-left:30px;
 }
 
-.apropos p
+.apropos p, .information p, .procedures p
 {
 	text-align:justify;
 }
 
-.apropos h2
+.apropos h2, .information h2, .procedures h2
 {
-	font-family: "Yanone Kaffeesatz",sans-serif;
 	font-size:2em;
+	margin-bottom:20px;
+	font-family: 'Raleway', sans-serif;
+	text-transform:uppercase;
 }
+
+.apropos span, .information span, .procedures span
+{
+	visibility:hidden;
+}
+
+.apropos h2 a, .information h2 a, .procedures h2 a
+{
+	color:#06F;
+}
+
+.aprop
+{
+	background:url(../images/apropos.jpg) center left;
+}
+
+.aprop h1, .info h1, .test h1
+{
+	visibility:hidden;
+}
+
+/*-------information--------*/
+.information
+{
+	margin: 40px 35px 0 100px;
+	border-left:8px solid #CDCDCD;
+	padding-left:30px;
+}
+
+.info
+{
+	background:url(../images/information.png) center left no-repeat;
+}
+
+.test
+{
+	background:url(../images/procedure.png) center left no-repeat;
+}
+
+
