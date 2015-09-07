@@ -20,3 +20,5 @@ jQuery(document).ready(function() {
 	})
     
 });
+
+$('<strong>lololol</strong>').prependTo('.page-web-onglet');
