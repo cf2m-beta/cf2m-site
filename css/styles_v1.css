@@ -310,6 +310,11 @@ nav li a:hover
 	/*margin-top:10px;*/
 }
 
+.slide
+{
+	background:url(../images/http.png) no-repeat left center;
+}
+
 .wdev
 {
 	background:url(../images/dev_web.jpg) no-repeat left center;
