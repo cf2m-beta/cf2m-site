@@ -22,24 +22,44 @@
         <div id="message">
             <?php print $connexion?>
         </div>
-      
-        
-        <div class="cf2m">
-            <!--<h2>cf2m c'est aussi</h2>-->
-            <ul>
-                <li><img src="<?php print RACINE ?>images/icones/logo-pixelandco.png" title="pixelco logo" /></li>
-                <li><img src="<?php print RACINE ?>images/icones/CF2DNew_logo.png" title="cf2d logo" /></li>
-                <li><img src="<?php print RACINE ?>images/icones/logo-pedagotheque.png" title="Pédagotheque logo" /></li>
-            </ul>
-        </div>
+        <?php
+            if($dossier_parent != 'demploye' && $dossier_parent != 'employe'):
+        ?>
+            <div class="cf2m">
+                <ul>
+                    <li><img src="<?php print RACINE ?>images/icones/logo-pixelandco.png" title="pixelco logo" /></li>
+                    <li><img src="<?php print RACINE ?>images/icones/CF2DNew_logo.png" title="cf2d logo" /></li>
+                    <li><img src="<?php print RACINE ?>images/icones/logo-pedagotheque.png" title="Pédagotheque logo" /></li>
+                </ul>
+            </div>
+        <?php
+            else:
+        ?>
+            <div class="search">
+                <form action="" method="post" name="recherche">
+                    <ul id="searchbar">
+                        <li>
+                            <input name="search" type="search" class="searchInput" placeholder="Rechercher" title="Rechercher" />
+                            <a href="#" onClick="document.fsearch.submit()">
+                                <img src="<?php print RACINE ?>images/icones/reach.png" style="border: none;" alt="Search" />
+                            </a>
+                        </li>
+                    </ul>
+                    <input type="submit" style="display:none;"/>
+
+                </form>
+            </div>
+        <?php
+            endif;
+        ?>
         <div class="clear"></div>
-          <div class="lolo">
+            <div class="lolo">
              <?php
-				//boutons admin et espace formateur
-				print isset($_SESSION['login'])? ($_SESSION['permission']== 1 || $_SESSION['permission']== 2) ? 
-				(isset($_GET['menu']) ? '<a href="?menu='.$_GET['menu'].'&admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>' : '<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>')
-				  : '<a href="">Espace Formateur</a>' : ''
-	        ?>
+                //boutons admin et espace formateur
+                print isset($_SESSION['login'])? ($_SESSION['permission']== 1 || $_SESSION['permission']== 2) ? 
+                (isset($_GET['menu']) ? '<a href="?menu='.$_GET['menu'].'&admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>' : '<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>')
+                  : '<a href="">Espace Formateur</a>' : ''
+            ?>
         </div>
     </div>
     <div class="logo">
@@ -50,29 +70,10 @@
     <div class="clear"></div>
 </div>
 <div class="noprint" style="z-index:9998; position:relative;">		
-        <?php
-            print $menu_deroulant;
-            
-            if($dossier_parent == 'demploye'):
-        ?>
-        
-                <div class="search">
-                    <form action="" method="post" name="recherche">
-                        <ul id="searchbar">
-                            <li>
-                                <input name="search" type="search" class="searchInput" placeholder="Rechercher" title="Rechercher" />
-                                <a href="#" onClick="document.fsearch.submit()">
-                                    <img src="<?php print RACINE ?>images/icones/reach.png" style="border: none;" alt="Search" />
-                                </a>
-                            </li>
-                        </ul>
-                        <input type="submit" style="display:none;"/>
-
-                    </form>
-                </div>
-        <?php endif;?>
-        
-        <div class="clear"></div>
+    <?php
+        print $menu_deroulant;
+    ?>
+    <div class="clear"></div>
 </div>
 
 <?php

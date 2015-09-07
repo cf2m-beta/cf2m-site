@@ -1,9 +1,17 @@
 <?php
     include_once '../include/config.php';
-    include '../include/html-head.php';
+    include_once '../include/html-head.php';
 ?>
-    <body>        
-    <div class="test">test div contenu</div>
+<body>
+<div id="wrapper">
+<?php 
+    include_once '../controleur/header.php'; 
+?>    
+<div id="content">
+    <?php print $content;?>
+    <div class="clear"></div>
+</div>
+    
 <?php
-    include '../include/footer.php';
+    include_once '../include/footer.php';
 ?>
