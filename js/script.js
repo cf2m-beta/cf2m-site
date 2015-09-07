@@ -38,6 +38,7 @@ function envoye_ajax(value,table,colonne,condition){
             if (req_xhr.readyState===4 && req_xhr.status === 200) {
                
                 if(req_xhr.responseText !=='Mise à jour réussie'){
+                    console.log(req_xhr.responseText);
                     alert('Mise à jour échouée, veuillez recomencer');
                 }
             }
@@ -81,10 +82,28 @@ $(".element_global").on("click", "input[type='submit']",function(){
     console.log($(this).siblings('input[name="titre"]').val());
     val = new Array($(this).siblings('input[name="titre"]').val(),$(this).siblings('textarea[name="texte"]').val());
     colonne = [$(this).siblings('input[name="titre"]').attr('name'), $(this).siblings('textarea[name="texte"]').attr('name')];
-    envoye_ajax(val,'texte', colonne,$(this).parent().parent().data('id'));
+    var result = envoye_ajax(val,'texte', colonne,$(this).parent().parent().data('id'));
+    console.log(result);
     $(this).parent().siblings().css('display','block');
     $(this).parent().siblings().find('h2 a').text(val[0]);
     $(this).parent().siblings().find('p').text(val[1]);
     $(this).parent().remove();
     return false;
 });
+
+//Eric work - On caache la zone de texte
+    jQuery('#toggle').hide();
+
+    jQuery('.middle-content .demploi a').mouseover(function()
+    {
+        jQuery(this).parent().siblings('.toggle').show(500);
+        jQuery(this).parent().parent().siblings().find('.toggle').hide(500);
+        return false;
+    });
+
+    jQuery('.middle-content .patron a').mouseover(function()
+    {
+        jQuery(this).parent().siblings('.toggle').show(500);
+        jQuery(this).parent().parent().siblings().find('.toggle').hide(500);
+        return false;
+    });

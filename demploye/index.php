@@ -33,8 +33,8 @@
                 
                 $content.= '<div class="element_global" data-id="'.$un_texte['id'].'"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
                 $content.= "<a href='?menu=".$un_texte['page_id']."' class='$classe[1]1'></a>";
-                $content.= "<h2><a href=''>".$un_texte['titre']."</a></h2>";
-                $content.= "<p>".nl2br($un_texte['texte'])."</p>";
+                $content.= "<h2><a href=''>".html_entity_decode($un_texte['titre'])."</a></h2>";
+                $content.= "<p>".nl2br(html_entity_decode($un_texte['texte']))."</p>";
                 $content.= "<span><a class='liremore' href=''>Pour plus ici... [+]</a> </span>";
                 $content.= '</'.$un_texte['element'].'></div>';
             }
@@ -53,8 +53,8 @@
                         
                         $content.= '<div class="element_global" data-id="'.$un_texte['id'].'"><'.$un_texte['element'].' class="'.$un_texte['classe'].$editable.'">';
                         $content.= "<a href='' class='$classe[1]1'></a>";
-                        $content.= "<h2><a href=''>".$un_texte['titre']."</a></h2>";
-                        $content.= "<p>".nl2br($un_texte['texte'])."</p>";
+                        $content.= "<h2><a href=''>". html_entity_decode($un_texte['titre'])."</a></h2>";
+                        $content.= "<p>".nl2br(html_entity_decode($un_texte['texte']))."</p>";
                         $content.= "<span><a class='liremore' href=''>Pour plus ici... [+]</a> </span>";
                         $content.= '</'.$un_texte['element'].'></div>';
                     }

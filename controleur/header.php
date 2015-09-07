@@ -26,7 +26,8 @@
     }
     
 
-    $menu_deroulant = $dossier_parent == 'demploye' ? afficher_menu(0, 0, $pages) : '';
+    $menu_deroulant = $dossier_parent == 'demploye' ? afficher_menu(0, 0, $pages):
+                      ($dossier_parent == 'employe'? afficher_menu(3, 0, $pages):'');
     
     //baniere
     $banner="<div id='banner' class='slide'>
