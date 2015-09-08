@@ -3,7 +3,7 @@
     include_once 'modele/fonctions-db.php';
     include_once 'include/fonctions.php';
     include 'include/html-head.php';
-    session_start();
+    @session_start();
     $array_dirname = explode(DIRECTORY_SEPARATOR, dirname(__FILE__));
     $dossier_parent = array_pop($array_dirname);
 ?>

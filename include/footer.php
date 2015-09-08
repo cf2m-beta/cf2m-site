@@ -65,10 +65,18 @@
                <section>
                  <P>Suivez-nous sur</P>
                  <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li>
+                        <a href="https://www.facebook.com/groups/35535997008/" target="_blank"></a><!--facebook-->
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/b/105339441842557242953/105339441842557242953/posts" target="_blank"></a><!--google+-->
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/MikeCF2m" target="_blank"></a><!--twitter-->
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/grp/home?gid=6974153" target="_blank"></a><!--Linkedin-->
+                    </li>
                     <!--<li><a href=""></a></li>
                     <li><a href=""></a></li>-->
                  </ul>
