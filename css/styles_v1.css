@@ -180,6 +180,7 @@ nav li a:hover
 
 .lolo
 {
+	/*border:1px solid yellow;*/
 	text-align:right;
 	margin-top:10px;
 	color:#999;
@@ -248,12 +249,14 @@ nav li a:hover
 .search
 {
 	/*border:1px solid #F66;*/
-	width:400px;
 	text-align:right;
 	height:22px;
-	position:absolute;
-	right:10px;
-	top:12px;
+	float:right;
+	width:200px;
+	background:#666;
+	border-radius:10px;
+	padding-right:10px;
+	margin:55px 0 5px 0;
 }
 
 #searchbar 
@@ -273,15 +276,6 @@ nav li a:hover
 #searchbar img
 {
 	margin-top:2px;
-}
-
-.search
-{
-	float:right;
-	width:200px;
-	background:#666;
-	border-radius:10px;
-	padding-right:10px;
 }
 
 .search input
@@ -575,7 +569,7 @@ h2.intro
 {
 	width:700px;
 	margin:0 auto;
-	color:#036;
+	color:#333;
 	text-align:left;
 	padding:5px;
 	/*border:1px solid #CCC;*/
@@ -1351,19 +1345,19 @@ footer
 /*===========================*/
 
 /*-------a propos----------*/
-.apropos, .procedures
+.apropos, .procedures, .modstage, .dispostage
 {
 	margin: 40px 35px 0 100px;
 	border-left:8px solid #CDCDCD;
 	padding-left:30px;
 }
 
-.apropos p, .information p, .procedures p
+.apropos p, .information p, .procedures p, .modstage p, .dispostage p
 {
 	text-align:justify;
 }
 
-.apropos h2, .information h2, .procedures h2
+.apropos h2, .information h2, .procedures h2, .modstage h2, .dispostage h2
 {
 	font-size:2em;
 	margin-bottom:20px;
@@ -1371,12 +1365,12 @@ footer
 	text-transform:uppercase;
 }
 
-.apropos span, .information span, .procedures span
+.apropos span, .information span, .procedures span, .modstage span, .dispostage span
 {
 	visibility:hidden;
 }
 
-.apropos h2 a, .information h2 a, .procedures h2 a
+.apropos h2 a, .information h2 a, .procedures h2 a, .modstage h2 a, .dispostage h2 a
 {
 	color:#06F;
 }
@@ -1386,7 +1380,7 @@ footer
 	background:url(../images/apropos.jpg) center left;
 }
 
-.aprop h1, .info h1, .test h1
+.aprop h1, .info h1, .test h1, .mostages h1, .dispo h1
 {
 	visibility:hidden;
 }
