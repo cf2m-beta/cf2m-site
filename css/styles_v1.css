@@ -132,7 +132,7 @@ nav li a:hover
 .logo
 {
 	/*border:1px solid #960;*/
-	width:350px;
+	width:400px;
 	margin:25px 0 0 40px;
 	float:left;
 }
@@ -149,8 +149,7 @@ nav li a:hover
 {
 	color:#fff;
 	margin:5px 0;
-	font-size:2em;
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size:1.5em;
 }
 
 .cf2m
@@ -319,6 +318,7 @@ nav li a:hover
 {
 	height:60px;
 	width:500px;
+	background:url(../images/webBgBanner.png) no-repeat 30px;
 	background-color: rgba(255, 153, 0, 0.6);
 	display:block;
 	position:absolute;
@@ -343,6 +343,7 @@ nav li a:hover
 {
 	height:60px;
 	width:500px;
+	background:url(../images/paoBgBanner.png) no-repeat 30px;
 	background-color: rgba(181, 0, 123, 0.6);
 	display:block;
 	position:absolute;
@@ -366,7 +367,8 @@ nav li a:hover
 .aam h1
 {
 	height:60px;
-	width:500px;
+	width:550px;
+	background:url(../images/ammBgBanner.png) no-repeat 30px;
 	background-color: rgba(25, 107,242, 0.6);
 	display:block;
 	position:absolute;
@@ -390,7 +392,8 @@ nav li a:hover
 .acompt h1
 {
 	height:60px;
-	width:500px;
+	width:550px;
+	background:url(../images/aideBgBanner.png) no-repeat 30px;
 	background-color: rgba(204, 204, 0, 0.6);
 	display:block;
 	position:absolute;
@@ -414,7 +417,8 @@ nav li a:hover
 .res h1
 {
 	height:60px;
-	width:500px;
+	width:600px;
+	background:url(../images/rezoBgBanner.png) no-repeat 30px;
 	background-color: rgba(255, 0, 0, 0.6);
 	display:block;
 	position:absolute;
@@ -655,7 +659,6 @@ footer
 	border-left:none;
 	background-color:#CCC;
 	padding:0 10px 10px 10px;
-	margin-top:20px;
 }
 
 .footer-top section:nth-child(1) address
@@ -827,6 +830,12 @@ footer
 	text-align:right;
 	display:block;
 	margin-bottom:20px;
+}
+
+.made a
+{
+	color:#F90;
+	font-weight:bold;
 }
 /*--------------------------------*/
 /*--HOOFT MENU ET MENU DEROULANT--*/
