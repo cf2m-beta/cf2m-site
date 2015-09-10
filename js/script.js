@@ -91,19 +91,33 @@ $(".element_global").on("click", "input[type='submit']",function(){
     return false;
 });
 
+//click bouton supprimer elements page
+$(".element_global").on("click", "img.delete",function(){
+    if(confirm('Voulez vous supprimer : "'+$(this).data('titre')+'"')){
+
+            delete_url = window.location.href;
+            if(delete_url.search('delete=')!=-1){
+               delete_url = delete_url.substring(0,(delete_url.length-9));
+            }
+        window.location.href=(delete_url+'&delete=0');
+    }
+    else
+        console.log(window.location.href);
+});
+
 //Eric work - On caache la zone de texte
-    jQuery('#toggle').hide();
+jQuery('#toggle').hide();
 
-    jQuery('.middle-content .demploi a').mouseover(function()
-    {
-        jQuery(this).parent().siblings('.toggle').show(500);
-        jQuery(this).parent().parent().siblings().find('.toggle').hide(500);
-        return false;
-    });
+jQuery('.middle-content .demploi a').mouseover(function()
+{
+    jQuery(this).parent().siblings('.toggle').show(500);
+    jQuery(this).parent().parent().siblings().find('.toggle').hide(500);
+    return false;
+});
 
-    jQuery('.middle-content .patron a').mouseover(function()
-    {
-        jQuery(this).parent().siblings('.toggle').show(500);
-        jQuery(this).parent().parent().siblings().find('.toggle').hide(500);
-        return false;
-    });
+jQuery('.middle-content .patron a').mouseover(function()
+{
+    jQuery(this).parent().siblings('.toggle').show(500);
+    jQuery(this).parent().parent().siblings().find('.toggle').hide(500);
+    return false;
+});

@@ -20,13 +20,17 @@
     $editable = isset($_SESSION['login']) && isset($_GET['admin']) ? (($_SESSION['permission'] == 1 && $_SESSION['permission'] == $_GET['admin']) || ($_SESSION['permission']== 2 && $_SESSION['permission'] == $_GET['admin'])) ? ' editable'
                                                                                                       : '' 
                                           : '';
+    
+    $supprimable = isset($_SESSION['login']) && isset($_GET['admin']) ? (($_SESSION['permission'] == 1 && $_SESSION['permission'] == $_GET['admin'])) ? true
+                                                                                                      : false
+                                          : false;
             
     if(!isset($_GET['menu'])){
         //!!!!!!!!!!!!!!!!!!!!! affichage page id 1 (formation)    
         $content = '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>';
         //pour l'affichage contenu html venant de la BD
         //AJOUTER HTML DECODE
-        $mysqli_result_texte = select('texte', '*', "WHERE page_id=1");
+        $mysqli_result_texte = select('texte', '*', "WHERE page_id=1 ORDER BY ordre ASC");
         if(!is_string($mysqli_result_texte)){
             while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
                 $classe = explode (' ',$un_texte['classe']);
@@ -36,6 +40,7 @@
                 $content.= "<h2><a href=''>".html_entity_decode($un_texte['titre'])."</a></h2>";
                 $content.= "<p>".nl2br(html_entity_decode($un_texte['texte']))."</p>";
                 $content.= "<span><a class='liremore' href=''>Pour plus ici... [+]</a> </span>";
+                $content.= $supprimable ? "<img class='delete' data-id='".$un_texte['id']."' data-titre='".html_entity_decode($un_texte['titre'])."' src='".RACINE."images/delete.png' alt='Supprimer' title='Supprimer'>": '';
                 $content.= '</'.$un_texte['element'].'></div>';
             }
         }
@@ -46,7 +51,7 @@
                 $content =($_GET['menu']==1)? '<h1 class="title-cata">CATALOGUE DES FORMATIONS</h1>':'';
                 //pour l'affichage contenu html venant de la BD
                 //AJOUTER HTML DECODE
-                $mysqli_result_texte = select('texte', '*', "WHERE page_id='".$value['id']."'");
+                $mysqli_result_texte = select('texte', '*', "WHERE page_id=".$value['id']." ORDER BY ordre ASC");
                 if(!is_string($mysqli_result_texte)){
                     while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
                         $classe = explode (' ',$un_texte['classe']);
@@ -56,6 +61,7 @@
                         $content.= "<h2><a href=''>". html_entity_decode($un_texte['titre'])."</a></h2>";
                         $content.= "<p>".nl2br(html_entity_decode($un_texte['texte']))."</p>";
                         $content.= "<span><a class='liremore' href=''>Pour plus ici... [+]</a> </span>";
+                        $content.= $supprimable ? "<img class='delete' data-id='".$un_texte['id']."' data-titre='".html_entity_decode($un_texte['titre'])."' src='".RACINE."images/delete.png' alt='Supprimer' title='Supprimer'>": '';
                         $content.= '</'.$un_texte['element'].'></div>';
                     }
                 }
