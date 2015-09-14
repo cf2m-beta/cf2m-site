@@ -10,8 +10,10 @@
                   </address>
                   <ul>
                      <li>02/539.03.60</li>
-                     <li>administration@cf2m.be</li>
-                     <li>info@cf2m.be</li>
+                     <li>
+                         administration@cf2m.be<br />
+                         info@cf2m.be
+                     </li>
                   </ul>
                   
                   
@@ -46,11 +48,31 @@
             
             <div class="partenaires">
                  <ul>
-                     <li><img src="<?php print RACINE?>images/icones/bruxelles-formation.png" /></li>
-                     <li><img src="<?php print RACINE?>images/icones/actiris.png" /></li>
-                     <li><img src="<?php print RACINE?>images/icones/loterie-nationale.png" /></li>
-                     <li><img src="<?php print RACINE?>images/icones/fsc.png" /></li>
-                     <li><img src="<?php print RACINE?>images/icones/Region-bruxelles.png" /></li>
+                     <li>
+                         <a href="http://www.bruxellesformation.be/" target="_blank">
+                         <img src="<?php print RACINE?>images/icones/bruxelles-formation.png" />
+                         </a>
+                     </li>
+                     <li>
+                         <a href="http://www.actiris.be/" target="_blank">
+                         <img src="<?php print RACINE?>images/icones/actiris.png" />
+                         </a>
+                     </li>
+                     <li>
+                         <a href="https://www.loterie-nationale.be" target="_blank">
+                         <img src="<?php print RACINE?>images/icones/loterie-nationale.png" />
+                         </a>
+                     </li>
+                     <li>
+                         <a href="http://www.plushaut.be/" target="_blank">
+                         <img src="<?php print RACINE?>images/icones/fsc.png" />
+                         </a>
+                     </li>
+                     <li>
+                         <a href="http://be.brussels/" target="_blank">
+                         <img src="<?php print RACINE?>images/icones/Region-bruxelles.png" />
+                         </a>
+                     </li>
                  </ul>
             </div>
             

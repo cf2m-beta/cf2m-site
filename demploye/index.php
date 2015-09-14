@@ -39,7 +39,7 @@
                 $content.= "<a href='?menu=".$un_texte['page_id']."' class='$classe[1]1'></a>";
                 $content.= "<h2><a href=''>".html_entity_decode($un_texte['titre'])."</a></h2>";
                 $content.= "<p>".nl2br(html_entity_decode($un_texte['texte']))."</p>";
-                $content.= "<span><a class='liremore' href=''>Pour plus ici... [+]</a> </span>";
+                $content.= "<span><a class='liremore' href=''>Pour plus d’infos... [+]</a> </span>";
                 $content.= $supprimable ? "<img class='delete' data-id='".$un_texte['id']."' data-titre='".html_entity_decode($un_texte['titre'])."' src='".RACINE."images/delete.png' alt='Supprimer' title='Supprimer'>": '';
                 $content.= '</'.$un_texte['element'].'></div>';
             }
@@ -60,7 +60,7 @@
                         $content.= "<a href='' class='$classe[1]1'></a>";
                         $content.= "<h2><a href=''>". html_entity_decode($un_texte['titre'])."</a></h2>";
                         $content.= "<p>".nl2br(html_entity_decode($un_texte['texte']))."</p>";
-                        $content.= "<span><a class='liremore' href=''>Pour plus ici... [+]</a> </span>";
+                        $content.= "<span><a class='liremore' href=''>Pour plus d’infos... [+]</a> </span>";
                         $content.= $supprimable ? "<img class='delete' data-id='".$un_texte['id']."' data-titre='".html_entity_decode($un_texte['titre'])."' src='".RACINE."images/delete.png' alt='Supprimer' title='Supprimer'>": '';
                         $content.= '</'.$un_texte['element'].'></div>';
                     }

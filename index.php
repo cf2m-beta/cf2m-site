@@ -22,7 +22,7 @@
                     Et vous cherchez une formation...
                  </article>
                  <div class="toggle" style="display:none;">
-                      Vous êtes demandeur inscrits chez Actiris, vous n’avez pas terminé 
+                      Vous êtes demandeur d’emploi inscrit chez Actiris, vous n’avez pas terminé 
                       vos humanités et vous habitez la région bruxelloise ?
                  </div>
                </aside>
@@ -35,7 +35,7 @@
                     qualifiées pour un stage.
                  </article>
                  <div class="toggle" style="display:none;">
-                       Vous êtes prêt à accueillir un nos stagiaires pour une période de 6 semaines 
+                       Vous êtes prêt à accueillir un de nos stagiaires pour une période de 6 semaines 
                        dans votre entreprise ?
                  </div>
                </aside>
@@ -48,7 +48,7 @@
                       et culturelle et contre les discriminations dans l’accès à la formation et à l’emploi.<br />
 
                       Le CF2m est actif dans le secteur de l’insertion sociale et professionnelle pour demandeurs.<br /> 
-                      <span style="display:block; text-align:right"><a class="liremore" href="">Pour plus ici... [+]</a> </span>
+                      <span style="display:block; text-align:right"><a class="liremore" href="<?php echo RACINE.'demploye/?menu=14' ?>">Pour plus d’infos... [+]</a> </span>
                    </p>
                </div>
            </div>

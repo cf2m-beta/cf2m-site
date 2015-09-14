@@ -3,7 +3,7 @@
         <nav>
             <ul>
                 <li><a href="?menu=1">Accueil</a></li>
-                <li><a href="">Plan du site</a></li>
+                <!--<li><a href="">Plan du site</a></li>-->
                 <li><a href="">Contactez-nous</a></li>
                 <li><a href="http://blog.cf2m.be/" target="_blank">Blog</a></li>
                 <?php print isset($_SESSION['login'])? '<li><a href="'.RACINE.'/include/logout.php" >Déconnexion</a></li' : '<li><a href="" class="connexion">Connexion</a></li'?>
