@@ -586,14 +586,8 @@ h2.intro
 /*---------------------------*/
 element_global
 {
-	/*border:1px solid #F03;*/
-	width:285px;
-	/*float:left;*/
-	font-size:.95em;
-	line-height:1.5em;
-	margin:35px 0 0 35px;
-	color:#333;
-	
+	border:1px solid #F03;
+	z-index:1000;
 }
 
 .editable
@@ -1039,6 +1033,12 @@ footer
 	height:200px;
 }
 
+.envoye_ajax textarea
+{
+	/*border:1px solid red;*/
+	z-index:1000;
+}
+
 .formation_miniature>a:nth-child(1)
 {
 	width:285px;
@@ -1411,5 +1411,6 @@ footer
 {
 	background:url(../images/procedure.png) center left no-repeat;
 }
+
 
 
