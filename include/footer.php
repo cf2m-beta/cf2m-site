@@ -10,12 +10,9 @@
                   </address>
                   <ul>
                      <li>02/539.03.60</li>
-                     <li>secretariat@cf2m.be</li>
+                     <li>administration@cf2m.be</li>
+                     <li>info@cf2m.be</li>
                   </ul>
-                 <!-- <span>
-                       ouvert du lundi au vendredi<br />
-                       de 9h00 à 17h
-                  </span>-->
                   
                   
                </section>
@@ -82,7 +79,10 @@
                  </ul>
                </section>
             </div>
-            <span class="made">Site réalisé par les stagiaires du cf2m</span>
+            <span class="made">Site réalisé par <a href="http://sallartiste.com" target="_blank">Eric Salla</a>, 
+                <a href="">Andrei Pastrame</a>, 
+                <a href="">Romuald Baldy</a>
+            </span>
         </footer>
 
         <script src="<?php print RACINE?>js/jquery-1.9.1.min.js"></script>
