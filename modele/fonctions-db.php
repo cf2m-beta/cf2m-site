@@ -32,12 +32,17 @@
     function insert($table, $colonne, $condition){
 
         global $db;
-        $query = "INSERT INTO $table ($colonne) VALUES ($condition)";
-        //var_dump($query); //TEST QUERRY
+        
+        if($colonne)
+            $query = "INSERT INTO $table ($colonne) VALUES ($condition)";
+        else 
+            $query = "INSERT INTO $table VALUES ($condition)";
+        
+        var_dump($query); //TEST QUERRY
         if(mysqli_query($db,$query))
             return "Ajout réussi!";
         else
-            return "Ajout echoué.";
+            return "Ajout echoué.".  mysqli_error($db);
     }
 
     function update($table, $colonne_valeur, $condition){

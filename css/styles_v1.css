@@ -1099,14 +1099,14 @@ footer
 {
 	font-size:1em;
 }
-
+/*
 .web1
 {
 	background:url(../images/sample.jpg) no-repeat center;
 	width:285px;
 	height:100px;
 	display:block;
-	/*background-size:cover;*/
+	
 }
 
 .web1:hover
@@ -1137,7 +1137,7 @@ footer
 .aide1
 {
 	background:url(../images/aide.jpg) no-repeat center;
-	/*border:1px solid #CCC;*/
+	
 }
 
 .aide1:hover
@@ -1148,7 +1148,7 @@ footer
 .rezo1
 {
 	background:url(../images/rezo.jpg) no-repeat center;
-	/*border:1px solid #CCC;*/
+	
 }
 
 .rezo1:hover
@@ -1161,6 +1161,7 @@ footer
 	background:url(../images/download.png) no-repeat center;
 	border:1px solid #CCC;
 }
+*/
 /*-----section information-----*/
 .info
 {
