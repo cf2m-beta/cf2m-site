@@ -72,7 +72,7 @@ $('.editable:not(".info")').dblclick(function(){
     $('.editable').css('display','block');
     $(this).css('display','none');
     $('.element_global').children('form').remove();
-    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='texte'>"+$(this).find('p').text()+"</textarea><br>\n\
+    $(this).parent().append("<form method='post' class='envoye_ajax'><input type='text' name='titre' id='new_titre' placeholder='Titre' value='"+$(this).find('h2 a').text()+"' required><br><textarea name='texte'>"+$(this).find('p').text()+"</textarea><br>\n\
         <input type='submit' value='Envoyer'></form>");
     return false;
 });
@@ -99,10 +99,16 @@ $(".element_global").on("click", "img.delete",function(){
             if(delete_url.search('delete=')!=-1){
                delete_url = delete_url.substring(0,(delete_url.length-9));
             }
-        window.location.href=(delete_url+'&delete=0');
+        window.location.href=(delete_url+'&delete='+$(this).data('id'));
     }
     else
         console.log(window.location.href);
+});
+
+//aparition formulaire d'ajout
+$("#content").on("click", "img.add",function(){
+    $(this).css('display','none');
+    $(this).after('<div class="formulaire_add"><h2>Ajout</h2><form method="post"><input type="text" name="titre" id="titre" placeholder="Titre" required><br><input type="text" name="image" id="image" placeholder="Image.extension" required><br><textarea name="texte" id="texte" placeholder="Contenu" required></textarea><br><input type="submit" value="Ajouter"></form></div>');
 });
 
 //Eric work - On caache la zone de texte
