@@ -108,6 +108,8 @@
         </footer>
 
         <script src="<?php print RACINE?>js/jquery-1.9.1.min.js"></script>
+        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+        <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
         <script src="<?php print RACINE?>js/script.js"></script>
         
         </div>

@@ -91,24 +91,50 @@ $(".element_global").on("click", "input[type='submit']",function(){
     return false;
 });
 
-//click bouton supprimer elements page
-$(".element_global").on("click", "img.delete",function(){
-    if(confirm('Voulez vous supprimer : "'+$(this).data('titre')+'"')){
+//click bouton modifier 
+$(".edit").click(function(){
+    var url = window.location.href;
+    
+    //get delete existe
+    if(url.indexOf('&edit=')!=-1){
+        
+        var get_delete = url.substr(0,url.indexOf('&edit='));
+        window.location.href=(get_delete+'&edit='+$(this).data('id'));
+        console.log(get_delete+'&edit='+$(this).data('id'));
+        
+    //get delete existe pas
+    }else{
+        var get = url.substr(url.indexOf('?menu'));
+        window.location.href=(get+'&edit='+$(this).data('id'));
+    }
+});
 
-            delete_url = window.location.href;
-            if(delete_url.search('delete=')!=-1){
-               delete_url = delete_url.substring(0,(delete_url.length-9));
+//click bouton supprimer elements page
+$(".delete_form").click(function(){
+    if(confirm('Voulez vous supprimer la formation: "'+$(this).data('titre')+'"')){
+
+            var delete_url = window.location.href;
+            if(delete_url.search('&delete-form=')!=-1){
+               delete_url = delete_url.substring(0,(delete_url.indexOf('&delete-form')));
             }
-        window.location.href=(delete_url+'&delete='+$(this).data('id'));
+        window.location.href=(delete_url+'&delete-form='+$(this).data('id'));
     }
     else
         console.log(window.location.href);
 });
 
-//aparition formulaire d'ajout
-$("#content").on("click", "img.add",function(){
-    $(this).css('display','none');
-    $(this).after('<div class="formulaire_add"><h2>Ajout</h2><form method="post"><input type="text" name="titre" id="titre" placeholder="Titre" required><br><input type="text" name="image" id="image" placeholder="Image.extension" required><br><textarea name="texte" id="texte" placeholder="Contenu" required></textarea><br><input type="submit" value="Ajouter"></form></div>');
+//click bouton supprimer elements page
+$(".delete").click(function(){
+    if(confirm('Voulez vous supprimer : "'+$(this).data('titre')+'"')){
+
+            var delete_url = window.location.href;
+            if(delete_url.search('&delete=')!=-1){
+               delete_url = delete_url.substring(0,(delete_url.indexOf('&delete')));
+            }
+        window.location.href=(delete_url+'&delete='+$(this).data('id'));
+    }
+    else
+        console.log(window.location.href);
 });
 
 //Eric work - On caache la zone de texte
