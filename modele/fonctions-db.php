@@ -38,7 +38,7 @@
         else 
             $query = "INSERT INTO $table VALUES ($condition)";
         
-        var_dump($query); //TEST QUERRY
+        //var_dump($query); //TEST QUERRY
         if(mysqli_query($db,$query))
             return "Ajout réussi!";
         else

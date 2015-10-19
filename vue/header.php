@@ -56,9 +56,8 @@
             <div class="lolo">
              <?php
                 //boutons admin et espace formateur
-                print isset($_SESSION['login'])? ($_SESSION['permission']== 1 || $_SESSION['permission']== 2) ? 
-                (isset($_GET['menu']) ? '<a href="?menu='.$_GET['menu'].'&admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>' : '<a href="?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>')
-                  : '<a href="">Espace Formateur</a>' : ''
+                print isset ($_SESSION['login'])? '<a href="'.RACINE.'admin/?admin='.$_SESSION['permission'].'">Administration</a> | <a href="">Espace Formateur</a>':'';
+                
             ?>
         </div>
     </div>
