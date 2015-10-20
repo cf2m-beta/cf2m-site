@@ -584,10 +584,9 @@ h2.intro
 /*---------------------------*/
 /*------ADMINISTRATION-------*/
 /*---------------------------*/
-element_global
+.form-element
 {
-	border:1px solid #F03;
-	z-index:1000;
+	/*border:1px solid #F03;*/
 }
 
 .editable
@@ -1022,10 +1021,10 @@ footer
 	border:1px solid #CF0;
 }
 
-.formation_miniature, .envoye_ajax
+.form-element
 {
 	width:285px;
-	float:left;
+	/*float:left;*/
 	font-size:.95em;
 	line-height:1.5em;
 	margin:35px 0 0 35px;
@@ -1033,13 +1032,7 @@ footer
 	height:200px;
 }
 
-.envoye_ajax textarea
-{
-	/*border:1px solid red;*/
-	z-index:1000;
-}
-
-.formation_miniature>a:nth-child(1)
+.form-element>a:nth-child(1)
 {
 	width:285px;
 	height:100px;
@@ -1410,5 +1403,33 @@ footer
 	background:url(../images/procedure.png) center left no-repeat;
 }
 
+/*===========================*/
+/*=== Administrations     ===*/
+/*===========================*/
 
+.form_insert
+{
+	padding-left:30px;
+	margin:20px 0;
+}
 
+.form_insert textarea
+{
+	width:900px;
+	height:200px;
+	padding-bottom:10px;
+}
+
+.all-admin-elements
+{
+	padding-left:30px;
+	margin:20px 0;
+	
+}
+
+.all-admin-elements textarea
+{
+	width:900px;
+	height:200px;
+	padding-bottom:10px;
+}
