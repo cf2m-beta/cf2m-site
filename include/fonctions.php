@@ -15,7 +15,11 @@
                     if($noeud['url']=='employe'){
                         $html .= "<li><a href='".RACINE.$noeud['url'].'/'."'>" . $noeud['titre']."</a>";
                     }else{
-                        $html .= ($noeud['droit']>0 && isset($_SESSION['permission']) && ($noeud['droit']==$_SESSION['permission']) || $_SESSION['permission']==1)? "<li><a href='?menu=".$noeud['id']."'>" . $noeud['titre']."</a>":"";
+                        //if($noeud['droit']>0 && isset($_SESSION['permission']) && ($noeud['droit']==$_SESSION['permission']) || $_SESSION['permission']==1 ){
+                            $html .=  "<li><a href='?menu=".$noeud['id']."'>" . $noeud['titre']."</a>";
+                        //}else{
+                           // $html = "";
+                        //}
                     }
                     $niveau_precedent = $niveau;
 
@@ -98,9 +102,14 @@
         $return .= "<div class='form_select_formation'><h2>Liste de Formations</h2><table>";
         
         while ($row = mysqli_fetch_assoc($liste)){
+            
+            $titre_page = select('page','titre', 'WHERE id='.$row['page_id']);
+            $titre_page = mysqli_fetch_assoc($titre_page);
+            $titre_page = html_entity_decode($titre_page['titre']);
+            
             $return .= "<tr>";
-            $return .= "<td>".$row['titre']."</td><td><button class='edit' data-titre='".$row['titre']."' data-id='".$row['page_id']."' name='Modifier'>Modifier</button></td>
-                        <td><button class='delete_form' data-titre='".$row['titre']."' data-id='".$row['page_id']."' name='Supprimer'>Supprimer</button></td>";
+            $return .= "<td>".$titre_page."</td><td><button class='edit' data-titre='".$titre_page."' data-id='".$row['page_id']."' name='Modifier'>Modifier</button></td>
+                        <td><button class='delete_form' data-titre='".$titre_page."' data-id='".$row['page_id']."' name='Supprimer'>Supprimer</button></td>";
             $return .= "</tr>";
         }
         

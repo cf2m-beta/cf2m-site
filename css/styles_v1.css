@@ -1252,16 +1252,18 @@ footer
 	visibility:hidden;
 }
 
-.page-web h2
-{
-	background: rgb(255,176,57);
-	background: -moz-linear-gradient(left,  rgba(255,176,57,1) 0%, rgba(246,119,0,1) 100%);
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,176,57,1)), color-stop(100%,rgba(246,119,0,1)));
-	background: -webkit-linear-gradient(left,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
-	background: -o-linear-gradient(left,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
-	background: -ms-linear-gradient(left,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
-	background: linear-gradient(to right,  rgba(255,176,57,1) 0%,rgba(246,119,0,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb039', endColorstr='#f67700',GradientType=1 );
+.form-element h2
+{   
+        padding:5px;
+        font-size:16px;
+}
+
+.form-element h2.bandrolle
+{   
+        padding:5px;
+	background: rgb(67,178,219);
+	color:white;
+        font-size:18px;
 }
 
 .page-pao h2
