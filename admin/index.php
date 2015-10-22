@@ -147,7 +147,7 @@
             $image = htmlentities($file_url, ENT_QUOTES, "UTF-8");
             //transformation du titre en url
             $url = title_to_url($_POST['titre']);
-            print $url;
+            //print $url;
             
             //5
             
@@ -182,31 +182,39 @@
             $content = '<h1 class="title-cata">Administration</h1>';
             include_once 'controleur/index.php';
         }else{
-            $content = '<h1 class="title-cata">Administration</h1>'; 
             
             if($url =='pagesd' || $url =='pagese'){
                 //affichage pages stagiaire et employeur
-                
+                $content = '<h1 class="title-cata">Administration</h1>';
             }
             else{
                 //si le formulaire des formations a été envoyé
                 if(isset($_GET['edit'])){
-                    print $url;
+                    //print $url;
                     //affichage formulaire d'insertion, d'un element pour une formation ciblée (3)
-                    $content .= form_insert("Ajout d'un élement dans la formation choisie", 'element');
-                    $content .= '<hr class="separation_admin">';
-
+                    
                     $page_id_locale = $_GET['edit'];
                     $select = select('texte', '*', "WHERE page_id =$page_id_locale ORDER BY ordre ASC");
+                    
+                    $titre_page = select('page','titre', 'WHERE id='.$page_id_locale);
+                    $titre_page = mysqli_fetch_assoc($titre_page);
+                    $titre_page = html_entity_decode($titre_page['titre']);
+                    
+                    $content = "<h1 class='title-cata'>Administration - $titre_page</h1>";
+                    
+                    $content .= form_insert("Ajout d'un élement dans la formation choisie", 'element');
+                    $content .= '<hr class="separation_admin">';
+                    
                     $content .= admin($select);
                     
                 }else{
+                    $content = '<h1 class="title-cata">Administration</h1>';
                     foreach($pages AS $value){
 
                         if($value['id'] == $_GET['menu']){
                             //pour la page des formations 
                             if($_GET['menu']==ID_FORMATIONS_ADMIN && !isset($_POST['form'])){
-                                print $url;
+                                //print $url;
                                 //ajout d'formulaire d'insertion de formations(1)
                                 $content .= form_insert("Ajout d'une formation", 'page');
                                 $content .= '<hr class="separation_admin">';
