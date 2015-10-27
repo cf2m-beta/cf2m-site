@@ -1,2 +1,0 @@
--commencer la mise en place du contenu en fonction de la formation..
--jQuery Inline Editor
