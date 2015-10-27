@@ -30,9 +30,9 @@
                 $titre_page = mysqli_fetch_assoc($titre_page);
                 
                 $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
-                $content.= (!empty($un_texte['url_image'])) ? "<div class='miniature_image'><a href='?menu=".$un_texte['page_id']."'><img src='".html_entity_decode($un_texte['url_image'])."' alt='".$un_texte['titre']."' title='".$un_texte['titre']."'></a></div>": "";
-                $content.= "<h2>".html_entity_decode($titre_page['titre'])."</h2>";
-                $content.= "<p>".html_entity_decode(substr($un_texte['texte'],0,200))."...</p>";
+                $content.= (!empty($un_texte['url_image'])) ? "<span class='hover-miniature-image'><div class='miniature_image'><a href='?menu=".$un_texte['page_id']."'><img src='".html_entity_decode($un_texte['url_image'])."' alt='".$un_texte['titre']."' title='".$un_texte['titre']."'></a></div></span>": "";
+                $content.= "<h2 style='color:".$un_texte['couleur']."'>".html_entity_decode($titre_page['titre'])."</h2>";
+                $content.= truncateHtml(html_entity_decode($un_texte['texte']),150);
                 $content.= "<span><a class='liremore' href='?menu=".$un_texte['page_id']."'>Pour plus d’infos... [+]</a> </span>";
                 $content.= '</'.$un_texte['element'].'>';
             }
@@ -55,9 +55,9 @@
                     $titre_page = mysqli_fetch_assoc($titre_page);
 
                     $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
-                    $content.= (!empty($un_texte['url_image'])) ? "<div class='miniature_image'><a href='?menu=".$un_texte['page_id']."'><img src='".$un_texte['url_image']."' alt='".$un_texte['titre']."' title='".$un_texte['titre']."'></a></div>": "";
-                    $content.= "<h2>".html_entity_decode($titre_page['titre'])."</h2>";
-                    $content.= "<p>".html_entity_decode(substr($un_texte['texte'],0,200))."...</p>";
+                    $content.= (!empty($un_texte['url_image'])) ? "<span class='hover-miniature-image'><div class='miniature_image'><a href='?menu=".$un_texte['page_id']."'><img src='".$un_texte['url_image']."' alt='".$un_texte['titre']."' title='".$un_texte['titre']."'></a></div></span>": "";
+                    $content.= "<h2 style='color:".$un_texte['couleur']."'>".html_entity_decode($titre_page['titre'])."</h2>";
+                    $content.= truncateHtml(html_entity_decode($un_texte['texte']),150);
                     $content.= "<span><a class='liremore' href='?menu=".$un_texte['page_id']."'>Pour plus d’infos... [+]</a> </span>";
                     $content.= '</'.$un_texte['element'].'>';
                 }

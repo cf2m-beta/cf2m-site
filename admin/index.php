@@ -7,6 +7,8 @@
     $array_dirname = explode(DIRECTORY_SEPARATOR, dirname(__FILE__));
     $dossier_parent = array_pop($array_dirname);
     
+    $msg_retour = "";   
+    
     $pages = array();
     $pages_db = select('page', '*', 'ORDER BY ordre ASC');
     $i=0;
@@ -15,7 +17,7 @@
         $i++;
     }
     
-    $url = '';
+    $url = ''; 
     
     if(isset($_GET['menu'])){
         $url = mysqli_fetch_assoc(select('page', 'url', 'WHERE id ='.$_GET['menu']));
@@ -30,24 +32,24 @@
         && $_SESSION['permission'] >0
         && $_SESSION['permission'] <4) {
         
-        delete('texte', 'WHERE id='.$_GET['delete']);
+        $delete = delete('texte', 'WHERE id='.$_GET['delete']);
+        $msg_retour = is_string($delete)? $delete : "Opération échouée.";
         //print 'deleted1';
     }else{
         //print 'nope';
     }
     
     // SUPRESSION FORMATION
-    if(isset($_GET['delete_form'])
+    if(isset($_GET['delete-form'])
         && isset($_SESSION['login'])
         && (int)$_SESSION['permission'] >0
         && (int)$_SESSION['permission'] <4) {
         
-        delete('page', 'WHERE id='.$_GET['delete_form']);
+        $delete = delete('page', 'WHERE id='.$_GET['delete-form']);
         
+        $msg_retour = is_string($delete)? $delete : "Opération échouée.";
+        //var_dump($delete);
         //print 'deleted2';
-    }else{
-        //print 'nope';
-        //var_dump($_SESSION);
     }
     
     // mise à jour
@@ -77,7 +79,7 @@
             $reponse = update('texte', "titre = '$titre', texte = '$texte', ordre= '$ordre'", "WHERE id=$id");
         }
         
-        print $reponse;
+        $msg_retour = is_string($reponse)? $reponse : "Opération échouée.";
     }
     
     //insertion
@@ -107,10 +109,11 @@
             }
 
             //insertion BD --- A FAIRE AFFICHAGE REPONSE
-            print $insert = insert('texte',
+            $insert = insert('texte',
                             'element, classe, titre, texte, url_image, ordre, page_id, url_group',
                             "'div', '$classe', '$titre', '$texte', '$image', $ordre, $page_id, '$url'");
-            $return = $insert;
+            
+            $msg_retour = is_string($insert)? $insert : "Opération échouée.";
             //ajout page (dans formations)
         }else {
             /*
@@ -157,10 +160,11 @@
             }
             
             //1
-            print $insert = insert('page', 
+             $insert = insert('page', 
                                     'titre, url, site, ordre, parent, droit', 
                                     "'$titre', '$url', 'demploye', $ordre, 1, 0");
-            $return = $insert;
+            
+            $msg_retour = is_string($insert)? $insert : "Opération échouée.";
             
             //11
             $select_page_id = select('page', 'id', "WHERE url='$url'");
@@ -169,10 +173,10 @@
             }
             
             //6
-            print $insert2 = insert('texte',
+            $insert2 = insert('texte',
                             'element, classe, titre, texte, url_image, ordre, page_id, url_group',
                             "'div', '$classe', '$titre', '$texte', '$image', 1, $page_id, 'form'");
-            $return .= $insert2;
+            $msg_retour .= is_string($insert2)? $insert2 : "Opération échouée.";
         }
     }
     
@@ -186,6 +190,7 @@
             if($url =='pagesd' || $url =='pagese'){
                 //affichage pages stagiaire et employeur
                 $content = '<h1 class="title-cata">Administration</h1>';
+                $content .= !empty($msg_retour)? $msg_retour : '';
             }
             else{
                 //si le formulaire des formations a été envoyé
@@ -209,6 +214,7 @@
                     
                 }else{
                     $content = '<h1 class="title-cata">Administration</h1>';
+                    $content .= !empty($msg_retour)? $msg_retour : '';
                     foreach($pages AS $value){
 
                         if($value['id'] == $_GET['menu']){
