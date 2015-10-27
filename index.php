@@ -6,6 +6,10 @@
     @session_start();
     $array_dirname = explode(DIRECTORY_SEPARATOR, dirname(__FILE__));
     $dossier_parent = array_pop($array_dirname);
+    
+    $apropos = select('texte', 'texte', 'WHERE page_id = 14');
+    $apropos = mysqli_fetch_assoc($apropos);
+    $apropos = $apropos['texte'];
 ?>
 <body>
     <div id="wrapper">
@@ -41,15 +45,13 @@
                </aside>
                <div class="clear"></div>
                <div class="descript">
-                   <p>
-                      <span style="color:#C30; font-weight:bold">Le Centre de Formation 2 mille (CF2m)</span>, implanté à Saint-Gilles, 
-                      propose des formations professionnelles en informatique pour demandeurs d’emploi. 
-                      Il a pour mission de lutter contre toutes les formes d’exclusion sociale 
-                      et culturelle et contre les discriminations dans l’accès à la formation et à l’emploi.<br />
-
-                      Le CF2m est actif dans le secteur de l’insertion sociale et professionnelle pour demandeurs.<br /> 
-                      <span style="display:block; text-align:right"><a class="liremore" href="<?php echo RACINE.'demploye/?menu=14' ?>">Pour plus d’infos... [+]</a> </span>
-                   </p>
+                    <p>
+                        <?php
+                            print truncateHtml(html_entity_decode($apropos),318, '');
+                        ?>
+                       
+                        <a class="liremore" href="<?php echo RACINE.'demploye/?menu=14' ?>">Pour plus d’infos... [+]</a>
+                    </p>
                </div>
            </div>
         </div>
