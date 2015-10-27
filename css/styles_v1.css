@@ -532,8 +532,10 @@ h2.intro
 {
 	/*border:1px solid red;*/
 	color:#666;
-	margin-top:10px;
+	padding-top:20px;
 	font-size:1.2em;
+	width:350px;
+	margin:0 auto;
 }
 
 .picto
@@ -571,12 +573,12 @@ h2.intro
 
 .descript
 {
-	width:700px;
+	width:600px;
 	margin:0 auto;
 	color:#333;
-	text-align:left;
-	padding:5px;
-	/*border:1px solid #CCC;*/
+	padding:10px;
+	border:1px solid #CCC;
+	text-align:justify;
 	/*border-radius:5px;*/
 	/*box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.66);*/
 }
@@ -1260,10 +1262,32 @@ footer
 
 .form-element h2.bandrolle
 {   
-        padding:5px;
+    padding:5px;
 	background: rgb(67,178,219);
 	color:white;
-        font-size:18px;
+    font-size:18px;
+}
+
+/*---Miniature image-----*/
+.hover-miniature-image
+{
+	display:block;
+	width:285px;
+	height:100px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.hover-miniature-image:hover
+{
+	background-color:rgba(255,255,255,0.5);
+}
+
+.miniature_image
+{
+	position:relative;
+	width:285px;
 }
 
 .page-pao h2
