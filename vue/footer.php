@@ -20,28 +20,28 @@
                </section>
                
                <section>
-                  <h4>Nos Formations</h4> 
-                  <ul>
-                     <li><a href="<?php echo RACINE.'demploye/?menu=7' ?>">Aide comptable</a></li>
-                     <li><a href="<?php echo RACINE.'demploye/?menu=4' ?>">Développeur Web</a></li>
-                     <li><a href="<?php echo RACINE.'demploye/?menu=5' ?>">Infographiste PAO</a></li> 
-                     <li><a href="<?php echo RACINE.'demploye/?menu=8' ?>">Technicien Réseau</a></li> 
-                     <li><a href="<?php echo RACINE.'demploye/?menu=6' ?>">Animateur Multimédia</a></li>
-                  </ul>
+                    <h4>Nos Formations</h4> 
+                    <ul>
+                        <?php
+                    
+                            while($une_formation=  mysqli_fetch_assoc($formation)){
+                                $url = RACINE.'demploye/?menu='.$une_formation['id'];
+                                print '<li><a href="'.$url.'">'.html_entity_decode($une_formation['titre']).'</a></li>';
+                            }
+
+                        ?>
+                    </ul>
                </section>
                
                <section>
-                   <h4>Dernières Nouvelles</h4>
-                   <p> 
-                      <span>15 Juin 2015</span>
-                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Aenean malesuada purus.
-                   </p>
-                   <p> 
-                      <span>20 Juillet 2015</span>
-                        Zorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Aenean malesuada purus.
-                   </p>
+                    <h4>Dernières Nouvelles</h4>
+                    <?php
+                    
+                        while($une_news=  mysqli_fetch_assoc($news)){
+                            print '<p>'. html_entity_decode($une_news['texte']).'</p>';
+                        }
+                    
+                    ?>
                </section>
                 <div class="clear"></div>
             </div>
@@ -101,8 +101,9 @@
                  </ul>
                </section>
             </div>
-            <span class="made">Site réalisé par <a href="http://sallartiste.com" target="_blank">Eric Salla</a>, 
-                <a href="">Andrei Pastrame</a>, 
+            <span class="made"> 
+                Site réalisé par <a href="">Andrei Pastrama</a>,
+                <a href="http://sallartiste.com" target="_blank">Eric Salla</a>, 
                 <a href="">Romuald Baldy</a>
             </span>
         </footer>

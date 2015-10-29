@@ -31,7 +31,7 @@
                 
                 $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
                 $content.= (!empty($un_texte['url_image'])) ? "<div class='miniature_image'><a href='?menu=".$un_texte['page_id']."'><img src='".html_entity_decode($un_texte['url_image'])."' alt='".$un_texte['titre']."' title='".$un_texte['titre']."'><span class='hover-miniature-image'></span></a></div>": "";
-                $content.= "<h2 style='color:".$un_texte['couleur']."'>".html_entity_decode($titre_page['titre'])."</h2>";
+                $content.= "<h2 style='color:".$un_texte['couleur']."; border-bottom:1px solid ".$un_texte['couleur']."'>".html_entity_decode($titre_page['titre'])."</h2>";
                 $content.= truncateHtml(html_entity_decode($un_texte['texte']),150);
                 $content.= "<span><a class='liremore' href='?menu=".$un_texte['page_id']."'>Pour plus d’infos... [+]</a> </span>";
                 $content.= '</'.$un_texte['element'].'>';
@@ -56,7 +56,7 @@
 
                     $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
                     $content.= (!empty($un_texte['url_image'])) ? "<div class='miniature_image'><a href='?menu=".$un_texte['page_id']."'><img src='".$un_texte['url_image']."' alt='".$un_texte['titre']."' title='".$un_texte['titre']."'><span class='hover-miniature-image'></span></a></div>": "";
-                    $content.= "<h2 style='color:".$un_texte['couleur']."'>".html_entity_decode($titre_page['titre'])."</h2>";
+                    $content.= "<h2 style='color:".$un_texte['couleur']."; border-bottom:1px solid ".$un_texte['couleur']."'>".html_entity_decode($titre_page['titre'])."</h2>";
                     $content.= truncateHtml(html_entity_decode($un_texte['texte']),150);
                     $content.= "<span><a class='liremore' href='?menu=".$un_texte['page_id']."'>Pour plus d’infos... [+]</a> </span>";
                     $content.= '</'.$un_texte['element'].'>';
@@ -78,10 +78,12 @@
                     
                     $mysqli_result_texte = select('texte', '*', "WHERE page_id=".$value['id']." ORDER BY ordre ASC");
                     if(!is_string($mysqli_result_texte)){
+                        $color = '';
                         while($un_texte=  mysqli_fetch_assoc($mysqli_result_texte)){
                             
+                            $color = !empty($un_texte['couleur']) ? $un_texte['couleur']:$color;
                             $content.= '<'.$un_texte['element'].' class="'.$un_texte['classe'].'">';
-                            $content.= "<h2 class='bandrolle'>".html_entity_decode($un_texte['titre'])."</h2>";
+                            $content.= "<h2 class='bandrolle' style='background-color:".$color."'>".html_entity_decode($un_texte['titre'])."</h2>";
                             //$content.= (!empty($un_texte['url_image'])) ? "<div class='miniature_image'><img src='".$un_texte['url_image']."' alt='".$un_texte['titre']."' title='".$un_texte['titre']."'></div>": "";
                             //$content.= "<h2><a href='?menu=".$un_texte['page_id']."'>". html_entity_decode($un_texte['titre'])."</a></h2>";
                             $content.= "<p>".html_entity_decode($un_texte['texte'])."</p>";

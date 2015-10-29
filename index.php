@@ -56,5 +56,5 @@
            </div>
         </div>
         <?php
-        include 'include/footer.php';
+        include 'controleur/footer.php';
         ?>

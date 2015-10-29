@@ -88,7 +88,7 @@
         if($_POST['type']=="element"){
             $file_url = '';
             $ordre = 99;
-            $page_id = $_GET['edit'];
+            $page_id = $_GET['menu'];
             $classe = $url.'-element';
 
             //image upload
